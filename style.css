@@ -51,7 +51,7 @@ header {
 /* ===== HERO ===== */
 .hero {
   background: url('https://raw.githubusercontent.com/ShreyaEnterprises/shreyaenterprises.github.io/refs/heads/main/images/shreya-enterprises-site.jpg?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  height: 85vh;
+  height: 90vh;
   color: #fff;
   position: relative;
   display: flex;
@@ -62,7 +62,7 @@ header {
 .hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 5; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.55);
 }
 .hero-content { position: relative; z-index: 1; }
