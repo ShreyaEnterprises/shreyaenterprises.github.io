@@ -10,7 +10,7 @@ body {
 .container { width: 90%; max-width: 1100px; margin: auto; }
 .section { padding: 60px 0; text-align: center; }
 .bg-light { background: #f9f9f9; }
-h2 { color: #004a7c; margin-bottom: 20px; }
+h2 { color: #fff; margin-bottom: 20px; }
 
 /* ===== BUTTON ===== */
 .btn {
@@ -62,7 +62,7 @@ header {
 .hero::after {
   content: "";
   position: absolute;
-  top: 5; left: 0; right: 0; bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.55);
 }
 .hero-content { position: relative; z-index: 1; }
