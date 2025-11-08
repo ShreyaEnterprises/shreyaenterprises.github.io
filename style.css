@@ -181,3 +181,73 @@ footer {
   .nav-links.show { display: flex; }
   .menu-toggle { display: block; }
 }
+
+/* ===== LOGO SLIDER ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.logo-slider {
+  text-align: center;
+  padding: 40px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.logo-slider h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Slider container */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Track that moves logos */
+.slide-track {
+  display: flex;
+  width: calc(250px * 16); /* 16 slides */
+  animation: scroll 40s linear infinite;
+}
+
+/* Individual logo boxes */
+.slide {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.slide img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Animation for continuous scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 8)); /* Move by half track width */
+  }
+}
