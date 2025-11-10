@@ -8,6 +8,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script>
+    // Toggle mobile menu
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("show");
+    }
+
+    // Intersection Observer for animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const animatedItems = document.querySelectorAll(".animate");
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      animatedItems.forEach(el => observer.observe(el));
+    });
+  </script>
 </head>
 <body>
   <!-- ===== HEADER ===== -->
@@ -26,14 +48,31 @@
       </nav>
     </div>
   </header>
-<div class="team-grid">
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section animate">
+    <div class="container">
+      <h2>About Us</h2>
+      <p><img src="images/logo_transparent.png" align="center" alt="official logo" width="250" height="69"><br/><br/>Shreya Enterprises was founded by Mr. Rajiv Kumar Tiwari in the year 2016. The company has grown due to its strengths, particularly its manpower and rich experience. We have been successful in earning and maintaining goodwill in all our areas of operation due to our integrity, our commitment to the quality of our people, and our dedication to delivering goods and services on time. The years of success of M/s Shreya Enterprises are attributed to its employees' dedication to excellence, exceptional customer service, and a safety program that has resulted in millions of accident-free hours. Honesty and open communication have strengthened the workforce of M/s Shreya Enterprises since day one, and this is reflected in our work.</p>
+
+      <div class="team-grid">
         <div class="team-card animate">
           <img src="images/rajeev-tiwari.jpg" alt="Rajeev Tiwari">
           <h3>Rajeev Tiwari</h3>
           <p>Managing Director</p>
         </div>
-</div>
-</body>
+        <!--<div class="team-card animate">
+          <img src="https://via.placeholder.com/150" alt="Team Member">
+          <h3>Sophia Lee</h3>
+          <p>Project Manager</p>
+        </div>
+        <div class="team-card animate">
+          <img src="https://via.placeholder.com/150" alt="Team Member">
+          <h3>Arun Kumar</h3>
+          <p>Welding Supervisor</p>
+        </div>-->
+      </div>
+    </div>
+  </section>
 <!-- ===== CLIENTS ===== -->
   <section class="logo-slider">
     <h2>Our Clients</h2>
