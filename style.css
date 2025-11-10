@@ -142,10 +142,12 @@ header {
 
 /* ===== FOOTER ===== */
 footer {
-  background: #CC5500;
-  color: #fff;
-  padding: 20px 0;
-}
+      position: relative;
+      background-color: #CC5500; /* orange */
+      padding: 20px 0;
+      color: #fff;
+      overflow: visible;
+    }
 .footer-flex {
   display: flex;
   justify-content: space-between;
@@ -165,11 +167,11 @@ footer {
   transform: translateX(-50%);
   background-color: #fff;
   padding: 0 6px;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 .shreya img {
-  width: 50px;
-  height: auto;
+  width: 60px;
+  height: 30px;
   display: block;
 }
 /* ===== ANIMATIONS ===== */
