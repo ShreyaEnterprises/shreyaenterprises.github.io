@@ -154,7 +154,21 @@ footer {
   width: 24px;
   margin: 0 8px;
 }
-
+/* ===== SHREYA ICON FOOTER ABOVE ===== */
+.shreya {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 0 6px;
+  border-radius: 20px;
+}
+.shreya img {
+  width: 50px;
+  height: auto;
+  display: block;
+}
 /* ===== ANIMATIONS ===== */
 .animate {
   opacity: 0;
