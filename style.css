@@ -128,6 +128,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: left;
 }
 .contact-form input, .contact-form textarea {
   padding: 10px;
