@@ -82,6 +82,7 @@ header {
 }
 .about {
   flex: 1 1 300px;
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 15px;
