@@ -1,3 +1,293 @@
-<p>The company has been working in the fields of construction and engineering for more than a decade with Partner Company M/s Ambica Enterprises.</p>
-<p>M/s Shreya Enterprises was founded by <b><a href="/about/managing-director.html">Mr. Rajeev Kumar Tiwari</a></b> during the year 2016. The company has grown by its strength, mainly manpower and its rich experience. We are successful in earning and maintaining good will in all our areas of operation on account of our sincerity in dealings, quality consciousness of our men and our enthusiasm to deliver goods & services in time.</p>
-<p>M/s Shreya Enterprises success over the years is due to its employees' dedication to excellent work, customer service that exceeds expectations, and a safety program that has led to millions of zero-accident hours. Honesty and open communication have empowered M/s Shreya Enterprises workforce since day one, and it shows in our work.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreya Enterprises</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ====== NAVBAR ====== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #007c32;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      color: #f39c12;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f39c12;
+    }
+
+    /* ====== WELCOME SECTION ====== */
+    .welcome {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 80px 10%;
+      gap: 2rem;
+    }
+
+    .welcome-text {
+      flex: 1 1 480px;
+    }
+
+    .welcome-text h3 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .welcome-text h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #444;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .welcome-text h1 span {
+      color: #f39c12;
+    }
+
+    .welcome-text p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .welcome-text .btn {
+      display: inline-block;
+      background-color: #f39c12;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 3px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .welcome-text .btn:hover {
+      background-color: #d98208;
+    }
+
+    .welcome-image {
+      flex: 1 1 400px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .welcome-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    /* ====== INFO SECTION ====== */
+    .info-section {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .info-box {
+      flex: 1 1 33.3%;
+      padding: 40px;
+      min-height: 250px;
+    }
+
+    .info-dark {
+      background-color: #1f1f1f;
+      color: #fff;
+    }
+
+    .info-orange {
+      background-color: #f39c12;
+      color: #fff;
+    }
+
+    .info-dark h3,
+    .info-orange h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .info-dark p,
+    .info-orange p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #eee;
+    }
+
+    .info-orange:nth-child(3) {
+      background-color: #1900ff;;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background-color: #CC5500;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 10%;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 5px;
+    }
+
+    /* ====== RESPONSIVE DESIGN ====== */
+    @media (max-width: 992px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .welcome {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .welcome-image {
+        justify-content: center;
+      }
+
+      .welcome-image img {
+        max-width: 400px;
+      }
+
+      .info-section {
+        flex-direction: column;
+      }
+
+      .info-box {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <div class="logo">SHREYA ENTERPRISES</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== WELCOME SECTION ===== -->
+  <section class="welcome">
+    <div class="welcome-text">
+      <h3>WELCOME TO</h3>
+      <h1><span>SHREYA ENTERPRISES</span></h1>
+      <p>
+        The company has been working in the fields of construction and engineering for more than a decade with Partner Company M/s Ambica Enterprises.
+      </p>
+      <p>
+        M/s Shreya Enterprises was founded by Mr. Rajeev Kumar Tiwari during the year 2016. The company has grown by its strength, mainly manpower and its rich experience. We are successful in earning and maintaining goodwill in all our areas of operation on account of our sincerity in dealings, quality consciousness of our men and our enthusiasm to deliver goods & services in time.
+      </p>
+      <p>
+        M/s Shreya Enterprises' success over the years is due to its employees' dedication to excellent work, customer service that exceeds expectations, and a safety program that has led to millions of zero accident hours. Honesty and open communication have empowered M/s Shreya Enterprises workforce since day one, and it shows in our work.
+      </p>
+      <a href="#" class="btn">Read More →</a>
+    </div>
+
+    <div class="welcome-image">
+      <img src="https://shreyaenterprises.github.io/images/shreya-enterprises-about.jpg" alt="Construction Site">
+    </div>
+  </section>
+
+  <!-- ===== INFO SECTION ===== -->
+  <section class="info-section">
+    <div class="info-box info-dark">
+      <h3>WHO WE ARE TODAY</h3>
+      <p>
+        We provide professional client-focused construction solutions. As an employee-owned company, we go above and beyond on every project and deliver on our promises with integrity.
+      </p>
+    </div>
+
+    <div class="info-box info-orange">
+      <h3>OUR MISSION</h3>
+      <p>
+        To deliver high-quality construction and engineering services to our clients by providing time-bound, cost-effective, innovative, and technically best solutions through our qualified, motivated, and skillful workforce and updated infrastructure.
+      </p>
+    </div>
+
+    <div class="info-box info-orange">
+      <h3>OUR VISION</h3>
+      <p>
+        To be a leading services provider offering high-quality construction and engineering services which add value to customer satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Shreya Enterprises. All Rights Reserved.
+    <br>
+    Designed by<a href="https://giteshgeeky.github.io">Gitesh Sharma</a>
+  </footer>
+
+</body>
+</html>
