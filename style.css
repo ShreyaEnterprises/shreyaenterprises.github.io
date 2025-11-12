@@ -89,7 +89,7 @@ header {
 .about-img { flex: 1 1 400px; }
 .about-img img {
   width: 90%;
-  height: 200px;
+  height: 190px;
   border-radius: 8px;
   transition: transform 0.3s;
 }
