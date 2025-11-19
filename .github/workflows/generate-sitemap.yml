@@ -1,0 +1,47 @@
+name: Generate sitemap.json
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate sitemap.json
+        run: |
+          echo "{" > sitemap.json
+          echo '  "pages": [' >> sitemap.json
+
+          FIRST=true
+          # Scan all .html files except GitHub special ones
+          for file in $(find . -name "*.html" ! -path "./404.html" ! -path "./sitemap.html"); do
+            if [ "$FIRST" = true ]; then
+              FIRST=false
+            else
+              echo "," >> sitemap.json
+            fi
+
+            # Convert "./folder/page.html" → "https://shreyaenterprises.github.io/folder/page.html"
+            URL="https://shreyaenterprises.github.io${file#./}"
+
+            echo "    {\"title\": \"${file#./}\", \"url\": \"$URL\", \"date\": \"$(date +%Y-%m-%d)\", \"tags\": []}" >> sitemap.json
+          done
+
+          echo "" >> sitemap.json
+          echo "  ]" >> sitemap.json
+          echo "}" >> sitemap.json
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add sitemap.json
+          git commit -m "Auto-update sitemap.json" || echo "No changes"
+          git push
