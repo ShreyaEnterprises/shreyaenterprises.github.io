@@ -1,0 +1,7 @@
+ {
+  "pages": [
+    { "title": "Home", "url": "/index.html", "date": "2025-01-01", "tags": ["main"] },
+    { "title": "About", "url": "/about.html", "date": "2025-01-02", "tags": ["info"] },
+    { "title": "Contact", "url": "/contact.html", "date": "2025-01-05", "tags": ["form"] }
+  ]
+ }
