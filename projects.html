@@ -151,3 +151,166 @@ Visakhapatnam (AP)</td>
     <td>On Going</td>
   </tr>
 </table>
+
+
+
+<!----jhfkjn---->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Credentials</title>
+
+<style>
+/* ===== Banner Section ===== */
+.InnerCommanBanner {
+  background: #1a1a1a;
+  padding: 60px 0;
+  color: white;
+  text-align: center;
+}
+.InnerCommanBanner h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+}
+
+/* ===== Section Title ===== */
+.ProjectSection1 {
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+.ProjectSection1 h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.ProjectSection1 h2 span {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* ===== Table Styling ===== */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  background: #fff;
+}
+
+table th {
+  background: #e63946;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tr:hover {
+  background: #f1f1f1;
+}
+
+table td.value {
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+.status-completed {
+  color: green;
+  font-weight: 600;
+}
+.status-ongoing {
+  color: #e67e22;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .InnerCommanBanner h1 { font-size: 32px; }
+  .ProjectSection1 h2 { font-size: 22px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== Banner Section ===== -->
+<div class="InnerCommanBanner">
+  <h1>PROJECT</h1>
+</div>
+
+<!-- ===== Project Details Section ===== -->
+<div class="ProjectSection1">
+  <h2>DETAILS OF <span>CREDENTIALS</span></h2>
+
+  <div class="table-container">
+    <table id="projectTable">
+      <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>Year</th>
+          <th>Project</th>
+          <th>Job Specification</th>
+          <th>Value (INR approx.)</th>
+          <th>Project Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- ===== Dynamic JavaScript Data Loader ===== -->
+<script>
+const projectData = [
+  {year:"2016-2017", project:"ONGC PETRO Addition Ltd.<br>Dahej Gujarat<br>Thru: Samsung Engineering", job:"Fabrication & Erection of AG unit Piping Work.", value:"4,08,07,473", status:"Completed"},
+  {year:"2017-2019", project:"TechnipFMC<br>Technip India Limited<br>GIDC Estate – Dahej-II, Bharuch", job:"Project Work & Structure Fabrication", value:"1,66,14,131", status:"Completed"},
+  {year:"2018-2019", project:"ONGC PETRO Addition Ltd.<br>Dahej Gujarat", job:"Manpower Supply", value:"40,48,536", status:"Completed"},
+  {year:"2017-2018", project:"TechnipFMC<br>Technip India Limited<br>Dahej-II, Bharuch", job:"Manpower Supply", value:"60,00,000", status:"Completed"},
+  {year:"2018-2019", project:"TechnipFMC<br>Technip India Limited<br>Dahej-II, Bharuch", job:"Manpower Supply", value:"3,40,00,000", status:"Completed"},
+  {year:"Dec 18 – Apr 2019", project:"UPL LIMITED<br>Ankleshwar, Bharuch-Gujarat", job:"Maintenance Work", value:"55,00,000", status:"Completed"},
+  {year:"Feb 19 – 2020", project:"Team Kriby MRF Site Gelenda<br>Jolva, Bharuch, Gujarat", job:"STR Fabrication & Manpower Supply", value:"1,35,00,000", status:"Completed"},
+  {year:"Mar 19 – Nov 19", project:"DUBEY PERFUMERS<br>Shadnagar, Telangana", job:"Manpower Supply & Maintenance Work", value:"50,00,000", status:"Completed"},
+  {year:"Sep 20 – Till Date", project:"M.E. Energy (P) Ltd.<br>Pune, Maharashtra", job:"Manpower Supply & Project Work", value:"55,00,000", status:"On Going"},
+  {year:"Mar 19 – Till Date", project:"GRASIM INDUSTRIES LTD.<br>Chemical Division, Epoxy Plant", job:"Maintenance & Project Work", value:"1,00,00,000", status:"On Going"},
+  {year:"Apr 19 – Till Date", project:"Technip FMC<br>Shadnagar & Dahej-II, Bharuch", job:"Manpower Supply", value:"4,80,00,000", status:"On Going"},
+  {year:"Apr 19 – Till Date", project:"Technip FMC<br>Technip India Limited, Dahej-II", job:"Structure & Piping Fabrication", value:"3,10,00,000", status:"On Going"},
+  {year:"Nov 19 – Till Date", project:"PETROFAC INTERNATIONAL UAE<br>Barmer, Rajasthan", job:"Manpower Supply", value:"3,50,00,000", status:"On Going"},
+  {year:"Apr 19 – Till Date", project:"PETROFAC INTERNATIONAL UAE<br>Visakhapatnam, Andhra Pradesh", job:"Manpower Supply", value:"3,90,00,000", status:"On Going"}
+];
+
+// === Load Rows Dynamically ===
+const tbody = document.querySelector("#projectTable tbody");
+
+projectData.forEach((item, index) => {
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td>${index + 1}</td>
+    <td>${item.year}</td>
+    <td>${item.project}</td>
+    <td>${item.job}</td>
+    <td class="value">${item.value}</td>
+    <td class="${item.status === 'Completed' ? 'status-completed' : 'status-ongoing'}">${item.status}</td>
+  `;
+  tbody.appendChild(row);
+});
+</script>
+
+</body>
+</html>
