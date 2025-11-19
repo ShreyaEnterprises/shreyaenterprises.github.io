@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EHS Policy – Shreya Enterprises – Bharuch</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+/*=============================
+   THEME COLORS
+==============================*/
+:root {
+    --green: #007c32;
+    --saffron: #CC5500;
+    --dark: #1a1a1a;
+}
+
+/*=============================
+   GLOBAL RESET
+==============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+
+body {
+    background: #f7f7f7;
+    color: #333;
+}
+
+/*=============================
+   HEADER
+==============================*/
+header {
+    width: 100%;
+    background: var(--green);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #E46F1A;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eaffea;
+    transition: .3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+/* HEADER */
+header{width:100%; background:var(--green); padding:18px 8%; display:flex; justify-content:space-between; align-items:center; color:#fff; position:sticky; top:0; z-index:1000;}
+.logo{font-size:1.8rem; font-weight:700;}
+nav{display:flex; gap:28px;}
+nav a{text-decoration:none; color:#eaffea; font-weight:500; transition:.3s;}
+nav a:hover{color:#000;}
+.menu-icon{font-size:2rem; display:none; cursor:pointer;}
+
+/* PAGE HEADER */
+.page-header{background:var(--green); color:#fff; padding:60px 8%; text-align:center; border-radius:0 0 12px 12px;}
+.page-header h1{font-size:2.8rem; margin-bottom:10px;}
+.page-header p{font-size:1.1rem;}
+
+/* CONTENT */
+.content-section{max-width:900px; margin:50px auto; padding:0 8%;}
+.content-section h2{color:var(--green); margin-bottom:12px;}
+.content-section p, .content-section li{margin-bottom:10px; font-size:1rem;}
+.content-section ul{margin-left:20px; margin-bottom:15px;}
+
+/*=============================
+   FOOTER (new design)
+==============================*/
+footer {
+    background: var(--saffron);
+    padding: 60px 8% 30px;
+    margin-top: 70px;
+    position: relative;
+    color: #111;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    color: #222;
+    line-height: 1.5;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-col ul li {
+    margin: 7px 0;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #222;
+    transition: .3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.social-icons a {
+    background: #00000025;
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    background: #000;
+    color: var(--saffron);
+}
+
+/* Bottom bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    padding-top: 20px;
+    border-top: 1px solid #000;
+}
+
+.footer-col img {
+    backdrop-filter: blur(6px);
+    background: #ffff;
+    border-radius: 8px;
+    padding: 0.5px;
+    box-shadow: 0 8px 11px rgba(0,0,0,0.12);
+    border-top: 1px solid var(--saffron);
+    transition: .4s ease;
+    text-align: center;
+    width: 180px;
+}
+
+.footer-bottom-text {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 1.6;
+}
+
+.footer-bottom-text a {
+    text-decoration: none;
+    color: #222;
+    transition: .3s;
+}
+
+.footer-bottom-text a:hover {
+    color: #fff;
+}
+
+/*=============================
+   RESPONSIVE NAV
+==============================*/
+@media(max-width: 850px){
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--green);
+        width: 200px;
+        padding: 20px;
+        flex-direction: column;
+        display: none;
+    }
+    nav.active {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="logo">Shreya <span>Enterprises</span></div>
+
+    <nav id="nav-menu">
+        <a href="/index.html">Home</a>
+        <a href="/about/company.html">About</a>
+        <a href="/about/team.html">Team</a>
+        <a href="/services.html">Services</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="page-header">
+    <h1>EHS Policy</h1>
+    <p>Management is firmly committed to a policy enabling all work activities to be carried out safely, and with all possible measures taken to approach zero risk to the health, safety and hygiene of workers and others stakeholders who may be affected by our operations.</p>
+</section>
+
+<!-- ================= Privacy ================= -->
+<!-- CONTENT -->
+<section class="content-section">
+    <h2>Application of This Policy</h2>
+    <p>We seek the co-operation of our workers, customers and other stakeholders to adhere safety policy and systems. Our team have strong commitment for realising safety objectives to create a safe working environment with a zero rate of accident.</p>
+    <h2>Quality Policy</h2>
+    <p>M/s SHREYA ENTERPRISES are committed to fulfil customer’s quality requirement and project specification to achieve customer’s satisfaction. By following best quality management principals. Our Constant Endeavour to provide efficient leadership, creativity in work and training to keep pace with latest Technological development to meet and support customer expectation, growth of organization and employees. We maintain highest standards of SAFETY, HEALTH, & ENVIRONMENT at the work place. We will try achieving best position as a leader in Engineering & construction Field.</p>
+<h2>Responsibilities</h2>
+  <p><b>Will provide and maintain:</b></p>
+    <ul>
+      <li>Safe working environment.</li>
+      <li>Safe systems of procedure</li>
+      <li>Keeping plant and surrounding in safe condition.</li>
+      <li>Providing good facilities for the welfare of workers.</li>
+      <li>Sharing / Training necessary information, instruction, and supervision that is necessary to ensure safe working and avoid risks to health and injury.</li>
+      <li>Commitment to continuously improve our performance through effective safety management.</li>
+    </ul>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="https://shreyaenterprises.github.io/images/logo_transparent.png" alt="Shreya Enterprises logo" title="Shreya Enterprises">
+            <p>Precision. Innovation. Industrial Excellence.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-youtube" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>📞 +91 9726097222</p>
+            <p>📧 shreyaent2000@gmail.com</p>
+            <p>🏭 3rd Floor, Shilpi Square, Dahej bypass Road, Bharuch, Gujarat, India - 392001</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+
+        <!---<div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">CNC Machining</a></li>
+                <li><a href="#">Automation</a></li>
+                <li><a href="#">Industrial Design</a></li>
+                <li><a href="#">Machine Manufacturing</a></li>
+            </ul>
+        </div>--->
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Shreya Enterprises, All Rights Reserved.
+    </div>
+    <div class="footer-bottom-text">
+       Design by <a href="https://giteshgeeky.blogspot.com/2021/06/what-is-server-error-how-to-find-and-fixed-server-error-5xx-through-google-search-console.html" target="_blank">Gitesh Sharma</a>
+    </div>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById('nav-menu').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
