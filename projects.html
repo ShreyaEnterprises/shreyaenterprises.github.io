@@ -301,6 +301,13 @@ table td.value {
   .InnerCommanBanner h1 { font-size: 28px; }
   .ProjectSection1 h2 { font-size: 20px; }
 }
+
+/* ===== Updated Time ===== */
+.updated {
+   font-size: 0.9em;
+   color: #777;
+   margin-top: 20px;
+}
    
 </style>
 </head>
@@ -387,6 +394,7 @@ projectData.forEach((item, index) => {
   tbody.appendChild(row);
 });
 </script>
+<p class="updated">Last updated: <script>document.write(new Date().toDateString());</script></p>
 </section>
 
 
