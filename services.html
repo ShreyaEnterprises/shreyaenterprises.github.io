@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team – Shreya Enterprises – Bharuch</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+/*=============================
+   THEME COLORS
+==============================*/
+:root {
+    --green: #007c32;
+    --saffron: #CC5500;
+    --dark: #1a1a1a;
+}
+
+/*=============================
+   GLOBAL RESET
+==============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+
+body {
+    background: #f7f7f7;
+    color: #333;
+}
+
+/*=============================
+   HEADER
+==============================*/
+header {
+    width: 100%;
+    background: var(--green);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #E46F1A;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eaffea;
+    transition: .3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+/*=============================
+   HERO SECTION (New Curved Design)
+==============================*/
+.hero {
+    background: linear-gradient(to right, var(--green), #178c30);
+    color: white;
+    padding: 70px 8%;
+    position: relative;
+    text-align: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: white;
+    border-radius: 0 0 50% 50%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/*=============================
+   TEAM SECTION (New Theme)
+==============================*/
+.team-section {
+    padding: 100px 8% 70px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.6rem;
+    color: var(--green);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 50px;
+}
+
+/* Team Cards */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 35px;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    border-top: 6px solid var(--saffron);
+    transition: .4s ease;
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.22);
+}
+
+.team-card img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 4px solid var(--green);
+}
+
+.team-card h3 {
+    font-size: 1.3rem;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.role {
+    color: var(--green);
+    font-weight: bold;
+    margin-top: 4px;
+    font-size: 0.95rem;
+}
+
+.desc {
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/*=============================
+   FOOTER (new design)
+==============================*/
+footer {
+    background: var(--saffron);
+    padding: 60px 8% 30px;
+    margin-top: 70px;
+    position: relative;
+    color: #111;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    color: #222;
+    line-height: 1.5;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-col ul li {
+    margin: 7px 0;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #222;
+    transition: .3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.social-icons a {
+    background: #00000025;
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    background: #000;
+    color: var(--saffron);
+}
+
+/* Bottom bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    padding-top: 20px;
+    border-top: 1px solid #000;
+}
+
+.footer-col img {
+    backdrop-filter: blur(6px);
+    background: #ffff;
+    border-radius: 8px;
+    padding: 0.5px;
+    box-shadow: 0 8px 11px rgba(0,0,0,0.12);
+    border-top: 1px solid var(--saffron);
+    transition: .4s ease;
+    text-align: center;
+    width: 180px;
+}
+
+.footer-bottom-text {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 1.6;
+}
+
+.footer-bottom-text a {
+    text-decoration: none;
+    color: #222;
+    transition: .3s;
+}
+
+.footer-bottom-text a:hover {
+    color: #fff;
+}
+
+/*=============================
+   RESPONSIVE NAV
+==============================*/
+@media(max-width: 850px){
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--green);
+        width: 200px;
+        padding: 20px;
+        flex-direction: column;
+        display: none;
+    }
+    nav.active {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="logo">Shreya <span>Enterprises</span></div>
+
+    <nav id="nav-menu">
+        <a href="/index.html">Home</a>
+        <a href="/about/company.html">About</a>
+        <a href="/about/team.html">Team</a>
+        <a href="/services.html">Services</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <h1>Our Services</h1>
+    <p>We value to customer’s satisfaction.</p>
+</section>
+<!-- ================= SERVICES ================= -->
+<section id="services" class="section bg-light animate">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-card animate">
+          <h3>Piping Fabrication</h3>
+          <p>Custom fabrication of stainless steel, carbon steel, and alloy piping systems for industrial facilities.</p>
+        </div>
+        <div class="service-card animate">
+          <h3>Welding & Inspection</h3>
+          <p>Certified welders providing high-quality welds with non-destructive testing and quality assurance.</p>
+        </div>
+        <div class="service-card animate">
+          <h3>Maintenance & Repairs</h3>
+          <p>Preventive and corrective maintenance for plant piping systems, tanks, and valves.</p>
+        </div>
+        <div class="service-card animate">
+          <h3>Manpower Supply</h3>
+          <p>Our services also include providing manpower to meet the requirements of manufacturing units, construction sites and other labour-intensive industries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="https://shreyaenterprises.github.io/images/logo_transparent.png" alt="Shreya Enterprises logo" title="Shreya Enterprises">
+            <p>Precision. Innovation. Industrial Excellence.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-youtube" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>📞 +91 9726097222</p>
+            <p>📧 shreyaent2000@gmail.com</p>
+            <p>🏭 3rd Floor, Shilpi Square, Dahej bypass Road, Bharuch, Gujarat, India - 392001</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+
+        <!---<div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">CNC Machining</a></li>
+                <li><a href="#">Automation</a></li>
+                <li><a href="#">Industrial Design</a></li>
+                <li><a href="#">Machine Manufacturing</a></li>
+            </ul>
+        </div>--->
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Shreya Enterprises, All Rights Reserved.
+    </div>
+    <div class="footer-bottom-text">
+       Design by <a href="https://giteshgeeky.blogspot.com/2021/06/what-is-server-error-how-to-find-and-fixed-server-error-5xx-through-google-search-console.html" target="_blank">Gitesh Sharma</a>
+    </div>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById('nav-menu').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
