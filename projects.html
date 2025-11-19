@@ -217,6 +217,91 @@ footer {
     }
 }
 
+/* ===== Projects ===== */
+   
+/* ===== Banner Section ===== */
+.InnerCommanBanner {
+  background: #1a1a1a;
+  padding: 60px 0;
+  color: white;
+  text-align: center;
+}
+.InnerCommanBanner h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+}
+
+/* ===== Section Title ===== */
+.ProjectSection1 {
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+.ProjectSection1 h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.ProjectSection1 h2 span {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* ===== Table Styling ===== */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  background: #fff;
+}
+
+table th {
+  background: #e63946;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tr:hover {
+  background: #f1f1f1;
+}
+
+table td.value {
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+.status-completed {
+  color: green;
+  font-weight: 600;
+}
+.status-ongoing {
+  color: #e67e22;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .InnerCommanBanner h1 { font-size: 32px; }
+  .ProjectSection1 h2 { font-size: 22px; }
+}
+   
 </style>
 </head>
 <body>
@@ -242,7 +327,7 @@ footer {
     <p>Here are the important projects we are working on, or have already done.</p>
 </section>
 
-<!-- ================= Privacy ================= -->
+<!-- ================= Table ================= -->
 <!-- CONTENT -->
 <section class="content-section">
     <!-- ===== Project Details Section ===== -->
@@ -373,88 +458,7 @@ function toggleMenu(){
 <title>Project Credentials</title>
 
 <style>
-/* ===== Banner Section ===== */
-.InnerCommanBanner {
-  background: #1a1a1a;
-  padding: 60px 0;
-  color: white;
-  text-align: center;
-}
-.InnerCommanBanner h1 {
-  font-size: 42px;
-  letter-spacing: 2px;
-}
 
-/* ===== Section Title ===== */
-.ProjectSection1 {
-  padding: 40px 0;
-  max-width: 1200px;
-  margin: auto;
-}
-.ProjectSection1 h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-.ProjectSection1 h2 span {
-  color: #e63946;
-  font-weight: bold;
-}
-
-/* ===== Table Styling ===== */
-.table-container {
-  overflow-x: auto;
-  margin-top: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 900px;
-  background: #fff;
-}
-
-table th {
-  background: #e63946;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 16px;
-}
-
-table td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  vertical-align: top;
-  font-size: 15px;
-}
-
-table tr:nth-child(even) {
-  background: #f9f9f9;
-}
-
-table tr:hover {
-  background: #f1f1f1;
-}
-
-table td.value {
-  font-weight: bold;
-  color: #2a9d8f;
-}
-
-.status-completed {
-  color: green;
-  font-weight: 600;
-}
-.status-ongoing {
-  color: #e67e22;
-  font-weight: 600;
-}
-
-@media (max-width: 600px) {
-  .InnerCommanBanner h1 { font-size: 32px; }
-  .ProjectSection1 h2 { font-size: 22px; }
-}
 </style>
 </head>
 
