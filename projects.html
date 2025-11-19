@@ -308,6 +308,72 @@ table td.value {
    color: #777;
    margin-top: 20px;
 }
+/* ===== Gallery ===== */
+/* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .box {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .caption {
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Fullscreen view (CSS-only Lightbox) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        /* Close button */
+        .lightbox a {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+        }
    
 </style>
 </head>
@@ -337,7 +403,55 @@ table td.value {
 <!-- ================= Table ================= -->
 <!-- CONTENT -->
 <section class="content-section">
-    <!-- ===== Project Details Section ===== -->
+<!-- ===== Project Gallery Section ===== -->
+
+<h2>Projects Gallery</h2>
+<!-- Gallery Section -->
+<div class="gallery">
+    <div class="box">
+        <a href="/project/HPCL_Site_Vizag_Visakhapatnam.jpg"><img src="/project/HPCL_Site_Vizag_Visakhapatnam.jpg"></a>
+        <div class="caption">HPCL Site, Vizag</div>
+    </div>
+
+    <div class="box">
+        <a href="/project/Technip_FMC.jpg"><img src="/project/Technip_FMC.jpg"></a>
+        <div class="caption">Technip FMC, Dahej</div>
+    </div>
+
+    <div class="box">
+        <a href="/project/technip_site_dahej_1.jpg"><img src="/project/technip_site_dahej_1.jpg"></a>
+        <div class="caption">#1, Technip, Dahej</div>
+    </div>
+
+    <div class="box">
+        <a href="/project/technip_site_dahej_2.jpg"><img src="/project/technip_site_dahej_2.jpg"></a>
+        <div class="caption">#2, Technip, Dahej</div>
+    </div>
+
+</div>
+
+<!-- Fullscreen Lightbox -->
+<div class="lightbox" id="img1">
+    <a href="/project/HPCL_Site_Vizag_Visakhapatnam.jpg">×</a>
+    <img src="/project/HPCL_Site_Vizag_Visakhapatnam.jpg">
+</div>
+
+<div class="lightbox" id="img2">
+    <a href="/project/Technip_FMC.jpg">×</a>
+    <img src="/project/Technip_FMC.jpg">
+</div>
+
+<div class="lightbox" id="img3">
+    <a href="/project/technip_site_dahej_1.jpg">×</a>
+    <img src="/project/technip_site_dahej_1.jpg">
+</div>
+
+<div class="lightbox" id="img4">
+    <a href="/project/technip_site_dahej_2.jpg">×</a>
+    <img src="/project/technip_site_dahej_2.jpg">
+</div>
+   
+<!-- ===== Project Details Section ===== -->
 <div class="ProjectSection1">
   <h2>DETAILS OF <span>CREDENTIALS</span></h2>
 
