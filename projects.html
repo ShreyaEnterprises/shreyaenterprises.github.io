@@ -238,27 +238,70 @@ footer {
 
 <!-- ================= HERO ================= -->
 <section class="page-header">
-    <h1>Privacy Policy</h1>
-    <p>Your privacy matters to us</p>
+    <h1>Projects</h1>
+    <p>Here are the important projects we are working on, or have already done.</p>
 </section>
 
 <!-- ================= Privacy ================= -->
 <!-- CONTENT -->
 <section class="content-section">
-    <h2>Introduction</h2>
-    <p>At MechFact Industries, we value your privacy. This policy explains what information we collect, how we use it, and your rights.</p>
-    <h2>Information We Collect</h2>
-    <ul>
-        <li>Personal details like name, email, phone.</li>
-        <li>Usage information of our website.</li>
-        <li>Feedback and inquiry submissions.</li>
-    </ul>
-    <h2>Use of Information</h2>
-    <p>We use the information to provide better services, respond to inquiries, and improve your website experience.</p>
-    <h2>Protection of Data</h2>
-    <p>We implement industry-standard security measures to protect your data from unauthorized access.</p>
-    <h2>Third-Party Sharing</h2>
-    <p>We do not sell your information. We may share data with service providers or as required by law.</p>
+    <!-- ===== Project Details Section ===== -->
+<div class="ProjectSection1">
+  <h2>DETAILS OF <span>CREDENTIALS</span></h2>
+
+  <div class="table-container">
+    <table id="projectTable">
+      <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>Year</th>
+          <th>Project</th>
+          <th>Job Specification</th>
+          <th>Value (INR approx.)</th>
+          <th>Project Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- ===== Dynamic JavaScript Data Loader ===== -->
+<script>
+const projectData = [
+  {year:"2016-2017", project:"ONGC PETRO Addition Ltd.<br>Dahej Gujarat<br>Thru: Samsung Engineering", job:"Fabrication & Erection of AG unit Piping Work.", value:"4,08,07,473", status:"Completed"},
+  {year:"2017-2019", project:"TechnipFMC<br>Technip India Limited<br>GIDC Estate – Dahej-II, Bharuch", job:"Project Work & Structure Fabrication", value:"1,66,14,131", status:"Completed"},
+  {year:"2018-2019", project:"ONGC PETRO Addition Ltd.<br>Dahej Gujarat", job:"Manpower Supply", value:"40,48,536", status:"Completed"},
+  {year:"2017-2018", project:"TechnipFMC<br>Technip India Limited<br>Dahej-II, Bharuch", job:"Manpower Supply", value:"60,00,000", status:"Completed"},
+  {year:"2018-2019", project:"TechnipFMC<br>Technip India Limited<br>Dahej-II, Bharuch", job:"Manpower Supply", value:"3,40,00,000", status:"Completed"},
+  {year:"Dec 18 – Apr 2019", project:"UPL LIMITED<br>Ankleshwar, Bharuch-Gujarat", job:"Maintenance Work", value:"55,00,000", status:"Completed"},
+  {year:"Feb 19 – 2020", project:"Team Kriby MRF Site Gelenda<br>Jolva, Bharuch, Gujarat", job:"STR Fabrication & Manpower Supply", value:"1,35,00,000", status:"Completed"},
+  {year:"Mar 19 – Nov 19", project:"DUBEY PERFUMERS<br>Shadnagar, Telangana", job:"Manpower Supply & Maintenance Work", value:"50,00,000", status:"Completed"},
+  {year:"Sep 20 – Till Date", project:"M.E. Energy (P) Ltd.<br>Pune, Maharashtra", job:"Manpower Supply & Project Work", value:"55,00,000", status:"On Going"},
+  {year:"Mar 19 – Till Date", project:"GRASIM INDUSTRIES LTD.<br>Chemical Division, Epoxy Plant", job:"Maintenance & Project Work", value:"1,00,00,000", status:"On Going"},
+  {year:"Apr 19 – Till Date", project:"Technip FMC<br>Shadnagar & Dahej-II, Bharuch", job:"Manpower Supply", value:"4,80,00,000", status:"On Going"},
+  {year:"Apr 19 – Till Date", project:"Technip FMC<br>Technip India Limited, Dahej-II", job:"Structure & Piping Fabrication", value:"3,10,00,000", status:"On Going"},
+  {year:"Nov 19 – Till Date", project:"PETROFAC INTERNATIONAL UAE<br>Barmer, Rajasthan", job:"Manpower Supply", value:"3,50,00,000", status:"On Going"},
+  {year:"Apr 19 – Till Date", project:"PETROFAC INTERNATIONAL UAE<br>Visakhapatnam, Andhra Pradesh", job:"Manpower Supply", value:"3,90,00,000", status:"On Going"}
+];
+
+// === Load Rows Dynamically ===
+const tbody = document.querySelector("#projectTable tbody");
+
+projectData.forEach((item, index) => {
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td>${index + 1}</td>
+    <td>${item.year}</td>
+    <td>${item.project}</td>
+    <td>${item.job}</td>
+    <td class="value">${item.value}</td>
+    <td class="${item.status === 'Completed' ? 'status-completed' : 'status-ongoing'}">${item.status}</td>
+  `;
+  tbody.appendChild(row);
+});
+</script>
 </section>
 
 
@@ -422,63 +465,6 @@ table td.value {
   <h1>PROJECT</h1>
 </div>
 
-<!-- ===== Project Details Section ===== -->
-<div class="ProjectSection1">
-  <h2>DETAILS OF <span>CREDENTIALS</span></h2>
-
-  <div class="table-container">
-    <table id="projectTable">
-      <thead>
-        <tr>
-          <th>Sr. No</th>
-          <th>Year</th>
-          <th>Project</th>
-          <th>Job Specification</th>
-          <th>Value (INR approx.)</th>
-          <th>Project Status</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-</div>
-
-<!-- ===== Dynamic JavaScript Data Loader ===== -->
-<script>
-const projectData = [
-  {year:"2016-2017", project:"ONGC PETRO Addition Ltd.<br>Dahej Gujarat<br>Thru: Samsung Engineering", job:"Fabrication & Erection of AG unit Piping Work.", value:"4,08,07,473", status:"Completed"},
-  {year:"2017-2019", project:"TechnipFMC<br>Technip India Limited<br>GIDC Estate – Dahej-II, Bharuch", job:"Project Work & Structure Fabrication", value:"1,66,14,131", status:"Completed"},
-  {year:"2018-2019", project:"ONGC PETRO Addition Ltd.<br>Dahej Gujarat", job:"Manpower Supply", value:"40,48,536", status:"Completed"},
-  {year:"2017-2018", project:"TechnipFMC<br>Technip India Limited<br>Dahej-II, Bharuch", job:"Manpower Supply", value:"60,00,000", status:"Completed"},
-  {year:"2018-2019", project:"TechnipFMC<br>Technip India Limited<br>Dahej-II, Bharuch", job:"Manpower Supply", value:"3,40,00,000", status:"Completed"},
-  {year:"Dec 18 – Apr 2019", project:"UPL LIMITED<br>Ankleshwar, Bharuch-Gujarat", job:"Maintenance Work", value:"55,00,000", status:"Completed"},
-  {year:"Feb 19 – 2020", project:"Team Kriby MRF Site Gelenda<br>Jolva, Bharuch, Gujarat", job:"STR Fabrication & Manpower Supply", value:"1,35,00,000", status:"Completed"},
-  {year:"Mar 19 – Nov 19", project:"DUBEY PERFUMERS<br>Shadnagar, Telangana", job:"Manpower Supply & Maintenance Work", value:"50,00,000", status:"Completed"},
-  {year:"Sep 20 – Till Date", project:"M.E. Energy (P) Ltd.<br>Pune, Maharashtra", job:"Manpower Supply & Project Work", value:"55,00,000", status:"On Going"},
-  {year:"Mar 19 – Till Date", project:"GRASIM INDUSTRIES LTD.<br>Chemical Division, Epoxy Plant", job:"Maintenance & Project Work", value:"1,00,00,000", status:"On Going"},
-  {year:"Apr 19 – Till Date", project:"Technip FMC<br>Shadnagar & Dahej-II, Bharuch", job:"Manpower Supply", value:"4,80,00,000", status:"On Going"},
-  {year:"Apr 19 – Till Date", project:"Technip FMC<br>Technip India Limited, Dahej-II", job:"Structure & Piping Fabrication", value:"3,10,00,000", status:"On Going"},
-  {year:"Nov 19 – Till Date", project:"PETROFAC INTERNATIONAL UAE<br>Barmer, Rajasthan", job:"Manpower Supply", value:"3,50,00,000", status:"On Going"},
-  {year:"Apr 19 – Till Date", project:"PETROFAC INTERNATIONAL UAE<br>Visakhapatnam, Andhra Pradesh", job:"Manpower Supply", value:"3,90,00,000", status:"On Going"}
-];
-
-// === Load Rows Dynamically ===
-const tbody = document.querySelector("#projectTable tbody");
-
-projectData.forEach((item, index) => {
-  const row = document.createElement("tr");
-  row.innerHTML = `
-    <td>${index + 1}</td>
-    <td>${item.year}</td>
-    <td>${item.project}</td>
-    <td>${item.job}</td>
-    <td class="value">${item.value}</td>
-    <td class="${item.status === 'Completed' ? 'status-completed' : 'status-ongoing'}">${item.status}</td>
-  `;
-  tbody.appendChild(row);
-});
-</script>
 
 </body>
 </html>
