@@ -165,9 +165,9 @@ header {
 .map { flex: 1 1 400px; }
 
 /* ===== FOOTER ===== */
-footer {
+/*footer {
       position: relative;
-      background-color: #CC5500; /* orange */
+      background-color: #CC5500; 
       padding: 20px 0;
       color: #fff;
       overflow: visible;
@@ -185,7 +185,7 @@ footer {
 }
 
 /* ===== SHREYA ICON FOOTER ABOVE ===== */
-.shreya {
+/*.shreya {
   position: absolute;
   top: -18px;
   left: 50%;
@@ -198,7 +198,7 @@ footer {
   width: 70px;
   height: 35px;
   display: block;
-}
+}*/
 
 /*=============================
    FOOTER (new design)
