@@ -204,7 +204,7 @@ header {
    FOOTER (new design)
 ==============================*/
 footer {
-    background: var(--saffron);
+    background: #CC5500;
     padding: 60px 8% 30px;
     margin-top: 70px;
     position: relative;
