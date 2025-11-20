@@ -285,7 +285,8 @@ footer {
 .footer-bottom-text {
     text-align: center;
     margin-top: 8px;
-    font-weight: 1.6;
+    font-weight: 400;
+    font-size: 12px;
 }
 
 .footer-bottom-text a {
