@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Block sensitive or duplicate files
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /drafts/
+
+# Allow important assets
+Allow: /about/
+Allow: /images/
+Allow: /clients/
+Allow: /project/
+Allow: /legal/
+Allow: /css/
+Allow: /js/
+
+# Sitemap Location
+Sitemap: https://shreyaenterprises.github.io/sitemap.xml
