@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sitemap – Shreya Enterprises – Bharuch</title>
+<title>Contact Us – Shreya Enterprises – Bharuch</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -115,11 +115,51 @@ nav a:hover {
 /*=============================
           CONTACT
 ==============================*/
+.contact-container {
+  max-width: 700px;
+  background: #fff;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
 
+button {
+  width: 100%;
+  padding: 14px;
+  background: #0b7a2a;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
+button:hover {
+  background: #086a24;
+}
 
-   
+/* ---------------- SUCCESS MESSAGE ---------------- */
+.success-box {
+  display: none;
+  text-align: center;
+  padding: 14px;
+  margin-top: 20px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 6px;
+  border: 1px solid #c3e6cb;
+}
+
 /*=============================
    FOOTER (new design)
 ==============================*/
@@ -218,15 +258,6 @@ footer {
 .footer-bottom-text a:hover {
     color: #fff;
 }
-
-/* ===== Updated Time ===== */
-.updated {
-   color: #777;
-   margin-top: 15px;
-   font-size: 12px;
-   font-weight: 400;
-   margin-left: 25px;
-}
    
 /*=============================
    RESPONSIVE NAV
@@ -259,7 +290,7 @@ footer {
     <div class="logo">Shreya <span>Enterprises</span></div>
 
     <nav id="nav-menu">
-        <a href="/index.html">Home</a>
+        <a href="/">Home</a>
         <a href="/about/company.html">About</a>
         <a href="/about/team.html">Team</a>
         <a href="/services.html">Services</a>
@@ -276,7 +307,37 @@ footer {
 </section>
 
 <!-- ================= CONTACT ================= -->
+<div class="contact-container">
+  <form id="contactForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSeXCeJkRleInuJJ0qqcwGwyOvH8q0GIanwRuL-FLdgIrOsh3w/formResponse"
+        method="POST"
+        target="hidden_iframe">
 
+    <input 
+      name="entry.1293334809" 
+      type="text" 
+      placeholder="Your Name" 
+      required>
+
+    <input 
+      name="entry.2107660078" 
+      type="email" 
+      placeholder="Your Email" 
+      required>
+
+    <textarea 
+      name="entry.515494297" 
+      rows="5" 
+      placeholder="Your Message" 
+      required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="success-box">Thank you! Your message has been sent. Our team will get back to you, shortly.</div>
+
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+</div>
 <!-- ================= FOOTER ================= -->
 <footer>
     <div class="footer-container">
@@ -327,11 +388,23 @@ footer {
        Design by <a href="https://giteshgeeky.blogspot.com/2021/06/what-is-server-error-how-to-find-and-fixed-server-error-5xx-through-google-search-console.html" target="_blank">Gitesh Sharma</a> | <a href="/legal/privacy.html">Privacy</a> | <a href="/sitemap.html">Sitemap</a>
     </div>
 </footer>
-
+   
+<!-- ---------------- MENU TOOGLE ---------------- -->
 <script>
 function toggleMenu(){
     document.getElementById('nav-menu').classList.toggle('active');
 }
+</script>
+
+<!-- ---------------- JS SUCCESS HANDLER ---------------- -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function() {
+  document.querySelector(".success-box").style.display = "block";
+  setTimeout(() => {
+    document.querySelector(".success-box").style.display = "none";
+    document.getElementById("contactForm").reset();
+  }, 3000);
+});
 </script>
 
 </body>
