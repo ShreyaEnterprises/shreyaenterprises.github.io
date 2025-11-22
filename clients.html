@@ -1,1 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects – Shreya Enterprises – Bharuch</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
 
+/*=============================
+   THEME COLORS
+==============================*/
+:root {
+    --green: #007c32;
+    --saffron: #CC5500;
+    --dark: #1a1a1a;
+}
+
+/*=============================
+   GLOBAL RESET
+==============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+
+body {
+    background: #f7f7f7;
+    color: #333;
+}
+
+/*=============================
+   HEADER
+==============================*/
+header {
+    width: 100%;
+    background: var(--green);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #E46F1A;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eaffea;
+    transition: .3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+/* HEADER */
+header{width:100%; background:var(--green); padding:18px 8%; display:flex; justify-content:space-between; align-items:center; color:#fff; position:sticky; top:0; z-index:1000;}
+.logo{font-size:1.8rem; font-weight:700;}
+nav{display:flex; gap:28px;}
+nav a{text-decoration:none; color:#eaffea; font-weight:500; transition:.3s;}
+nav a:hover{color:#000;}
+.menu-icon{font-size:2rem; display:none; cursor:pointer;}
+
+/* PAGE HEADER */
+.page-header{background:var(--green); color:#fff; padding:60px 8%; text-align:center; border-radius:0 0 12px 12px;}
+.page-header h1{font-size:2.8rem; margin-bottom:10px;}
+.page-header p{font-size:1.1rem;}
+
+/* CONTENT */
+.content-section{max-width:900px; margin:50px auto; padding:0 8%;}
+.content-section h2{color:var(--green); text-align: center; margin-bottom:12px;}
+.content-section p, .content-section li{margin-bottom:10px; font-size:1rem;}
+.content-section ul{margin-left:20px; margin-bottom:15px;}
+
+/*=============================
+   FOOTER (new design)
+==============================*/
+footer {
+    background: var(--saffron);
+    padding: 60px 8% 30px;
+    margin-top: 70px;
+    position: relative;
+    color: #111;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    color: #222;
+    line-height: 1.5;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-col ul li {
+    margin: 7px 0;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #222;
+    transition: .3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.social-icons a {
+    background: #00000025;
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    background: #000;
+    color: var(--saffron);
+}
+
+/* Bottom bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    padding-top: 20px;
+    border-top: 1px solid #000;
+}
+
+.footer-col img {
+    backdrop-filter: blur(6px);
+    background: #ffff;
+    border-radius: 8px;
+    padding: 0.5px;
+    box-shadow: 0 8px 11px rgba(0,0,0,0.12);
+    border-top: 1px solid var(--saffron);
+    transition: .4s ease;
+    text-align: center;
+    width: 180px;
+}
+
+.footer-bottom-text {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footer-bottom-text a {
+    text-decoration: none;
+    color: #222;
+    transition: .3s;
+}
+
+.footer-bottom-text a:hover {
+    color: #fff;
+}
+
+/*=============================
+   RESPONSIVE NAV
+==============================*/
+@media(max-width: 850px){
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--green);
+        width: 200px;
+        padding: 20px;
+        flex-direction: column;
+        display: none;
+    }
+    nav.active {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* ===== Projects ===== */
+   
+/* ===== Banner Section ===== */
+.InnerCommanBanner {
+  background: #1a1a1a;
+  padding: 60px 0;
+  color: white;
+  text-align: center;
+}
+.InnerCommanBanner h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+}
+
+/* ===== Section Title ===== */
+.ProjectSection1 {
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+.ProjectSection1 h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.ProjectSection1 h2 span {
+  color: #CC5500;
+  font-weight: bold;
+}
+
+/* ===== Table Styling ===== */
+.table-container {
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  background: #fff;
+}
+
+table th {
+  background: #0600ff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tr:hover {
+  background: #f1f1f1;
+}
+
+table td.value {
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+.status-completed {
+  color: green;
+  font-weight: 600;
+}
+.status-ongoing {
+  color: #e67e22;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .InnerCommanBanner h1 { font-size: 28px; }
+  .ProjectSection1 h2 { font-size: 20px; }
+}
+
+/* ===== Updated Time ===== */
+.updated {
+   font-size: 0.9em;
+   color: #777;
+   margin-top: 20px;
+}
+/* ===== Gallery ===== */
+/* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .box {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .caption {
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Fullscreen view (CSS-only Lightbox) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        /* Close button */
+        .lightbox a {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+        }
+   
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="logo">Shreya <span>Enterprises</span></div>
+
+    <nav id="nav-menu">
+        <a href="/index.html">Home</a>
+        <a href="/about/company.html">About</a>
+        <a href="/about/team.html">Team</a>
+        <a href="/services.html">Services</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="page-header">
+    <h1>Projects</h1>
+    <p>Here are the important projects we are working on, or have already done.</p>
+</section>
+
+<!-- ================= Table ================= -->
+<!-- CONTENT -->
+<section class="content-section">
+<!-- ===== Project Gallery Section ===== -->
+
+<h2>Projects Gallery</h2>
+<!-- Gallery Section -->
+<div class="gallery">
+    <div class="box">
+        <a href="/project/HPCL_Site_Vizag_Visakhapatnam.jpg"><img src="/project/HPCL_Site_Vizag_Visakhapatnam.jpg"></a>
+        <div class="caption">HPCL Site, Vizag</div>
+    </div>
+
+    <div class="box">
+        <a href="/project/Technip_FMC.jpg"><img src="/project/Technip_FMC.jpg"></a>
+        <div class="caption">Technip FMC, Dahej</div>
+    </div>
+
+    <div class="box">
+        <a href="/project/technip_site_dahej_1.jpg"><img src="/project/technip_site_dahej_1.jpg"></a>
+        <div class="caption">#1, Technip, Dahej</div>
+    </div>
+
+    <div class="box">
+        <a href="/project/technip_site_dahej_2.jpg"><img src="/project/technip_site_dahej_2.jpg"></a>
+        <div class="caption">#2, Technip, Dahej</div>
+    </div>
+
+</div>
+
+<!-- Fullscreen Lightbox -->
+<div class="lightbox" id="img1">
+    <a href="/project/HPCL_Site_Vizag_Visakhapatnam.jpg">×</a>
+    <img src="/project/HPCL_Site_Vizag_Visakhapatnam.jpg">
+</div>
+
+<div class="lightbox" id="img2">
+    <a href="/project/Technip_FMC.jpg">×</a>
+    <img src="/project/Technip_FMC.jpg">
+</div>
+
+<div class="lightbox" id="img3">
+    <a href="/project/technip_site_dahej_1.jpg">×</a>
+    <img src="/project/technip_site_dahej_1.jpg">
+</div>
+
+<div class="lightbox" id="img4">
+    <a href="/project/technip_site_dahej_2.jpg">×</a>
+    <img src="/project/technip_site_dahej_2.jpg">
+</div>
+   
+<!-- ===== Project Details Section ===== -->
+<div class="ProjectSection1">
+  <h2>DETAILS OF <span>CREDENTIALS</span></h2>
+
+  <div class="table-container">
+    <table id="projectTable">
+      <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>Year</th>
+          <th>Project</th>
+          <th>Job Specification</th>
+          <th>Value (INR approx.)</th>
+          <th>Project Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- ===== Dynamic JavaScript Data Loader ===== -->
+<script>
+const projectData = [
+  {year:"2016-2017", project:"ONGC PETRO Addition Ltd.<br>Dahej Gujarat<br>Thru: Samsung Engineering", job:"Fabrication & Erection of AG unit Piping Work.", value:"4,08,07,473", status:"Completed"},
+  {year:"2017-2019", project:"TechnipFMC<br>Technip India Limited<br>GIDC Estate – Dahej-II, Bharuch", job:"Project Work & Structure Fabrication", value:"1,66,14,131", status:"Completed"},
+  {year:"2018-2019", project:"ONGC PETRO Addition Ltd.<br>Dahej Gujarat", job:"Manpower Supply", value:"40,48,536", status:"Completed"},
+  {year:"2017-2018", project:"TechnipFMC<br>Technip India Limited<br>Dahej-II, Bharuch", job:"Manpower Supply", value:"60,00,000", status:"Completed"},
+  {year:"2018-2019", project:"TechnipFMC<br>Technip India Limited<br>Dahej-II, Bharuch", job:"Manpower Supply", value:"3,40,00,000", status:"Completed"},
+  {year:"Dec 18 – Apr 2019", project:"UPL LIMITED<br>Ankleshwar, Bharuch-Gujarat", job:"Maintenance Work", value:"55,00,000", status:"Completed"},
+  {year:"Feb 19 – 2020", project:"Team Kriby MRF Site Gelenda<br>Jolva, Bharuch, Gujarat", job:"STR Fabrication & Manpower Supply", value:"1,35,00,000", status:"Completed"},
+  {year:"Mar 19 – Nov 19", project:"DUBEY PERFUMERS<br>Shadnagar, Telangana", job:"Manpower Supply & Maintenance Work", value:"50,00,000", status:"Completed"},
+  {year:"Sep 20 – Till Date", project:"M.E. Energy (P) Ltd.<br>Pune, Maharashtra", job:"Manpower Supply & Project Work", value:"55,00,000", status:"On Going"},
+  {year:"Mar 19 – Till Date", project:"GRASIM INDUSTRIES LTD.<br>Chemical Division, Epoxy Plant", job:"Maintenance & Project Work", value:"1,00,00,000", status:"On Going"},
+  {year:"Apr 19 – Till Date", project:"Technip FMC<br>Shadnagar & Dahej-II, Bharuch", job:"Manpower Supply", value:"4,80,00,000", status:"On Going"},
+  {year:"Apr 19 – Till Date", project:"Technip FMC<br>Technip India Limited, Dahej-II", job:"Structure & Piping Fabrication", value:"3,10,00,000", status:"On Going"},
+  {year:"Nov 19 – Till Date", project:"PETROFAC INTERNATIONAL UAE<br>Barmer, Rajasthan", job:"Manpower Supply", value:"3,50,00,000", status:"On Going"},
+  {year:"Apr 19 – Till Date", project:"PETROFAC INTERNATIONAL UAE<br>Visakhapatnam, Andhra Pradesh", job:"Manpower Supply", value:"3,90,00,000", status:"On Going"}
+];
+
+// === Load Rows Dynamically ===
+const tbody = document.querySelector("#projectTable tbody");
+
+projectData.forEach((item, index) => {
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td>${index + 1}</td>
+    <td>${item.year}</td>
+    <td>${item.project}</td>
+    <td>${item.job}</td>
+    <td class="value">${item.value}</td>
+    <td class="${item.status === 'Completed' ? 'status-completed' : 'status-ongoing'}">${item.status}</td>
+  `;
+  tbody.appendChild(row);
+});
+</script>
+<p class="updated">Last updated: Nov. 2022</p>
+<!---<p class="updated">Last updated: <script>document.write(new Date().toDateString());</script></p>--->
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="https://shreyaenterprises.github.io/images/logo_transparent.png" alt="Shreya Enterprises logo" title="Shreya Enterprises">
+            <p>Precision. Innovation. Industrial Excellence.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-youtube" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>📞 +91 9726097222</p>
+            <p>📧 shreyaent2000@gmail.com</p>
+            <p>🏭 3rd Floor, Shilpi Square, Dahej bypass Road, Bharuch, Gujarat, India - 392001</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/company.html">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/sitemap.html">Sitemap</a></li>
+            </ul>
+        </div>
+
+        <!---<div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">CNC Machining</a></li>
+                <li><a href="#">Automation</a></li>
+                <li><a href="#">Industrial Design</a></li>
+                <li><a href="#">Machine Manufacturing</a></li>
+            </ul>
+        </div>--->
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Shreya Enterprises, All Rights Reserved.
+    </div>
+    <div class="footer-bottom-text">
+       Design by <a href="https://giteshgeeky.blogspot.com/2021/06/what-is-server-error-how-to-find-and-fixed-server-error-5xx-through-google-search-console.html" target="_blank">Gitesh Sharma</a> | <a herf="/legal/privacy.html">Privacy</a> | <a herf="/sitemap.html">Sitemap</a> 
+    </div>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById('nav-menu').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
