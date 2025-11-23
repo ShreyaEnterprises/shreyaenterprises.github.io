@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Team – Shreya Enterprises – Bharuch</title>
+<title>Our Services – Shreya Enterprises – Bharuch</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
@@ -110,28 +112,81 @@ nav a:hover {
     font-size: 1.1rem;
 }
 
-/* ===== SERVICES ===== */
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+/*=============================
+   ABOUT SECTION (New Theme)
+==============================*/
+.about-section {
+    padding: 80px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    margin: 40px 8%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
-.service-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+
+.about-section img {
+    max-width: 550px;
+    width: 100%;
+    border-radius: 12px;
 }
-.service-card:hover { transform: translateY(-5px); }
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* MD MESSAGE */
+.md-message {
+    background: #f0f0f0;
+    padding: 70px 8%;
+    text-align: center;
+    border-radius: 12px;
+    margin: 0 8% 50px;
+}
+
+.md-message h2 {
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 15px;
+}
+
+.md-message p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+    color: #333;
+}
+
+.md-message img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 25px;
+    border: 4px solid var(--green);
+}
 
 /*=============================
    FOOTER (new design)
 ==============================*/
 footer {
     background: var(--saffron);
-    padding: 60px 8% 30px;
+    padding: 30px 8% 15px;
     margin-top: 70px;
     position: relative;
     color: #111;
@@ -211,8 +266,8 @@ footer {
 .footer-bottom-text {
     text-align: center;
     margin-top: 8px;
-    font-size: 12px;
     font-weight: 400;
+    font-size: 12px;
 }
 
 .footer-bottom-text a {
@@ -271,29 +326,35 @@ footer {
     <h1>Our Services</h1>
     <p>We value to customer’s satisfaction.</p>
 </section>
-<!-- ================= SERVICES ================= -->
-<section id="services" class="section bg-light animate">
-    <div class="container">
-      <div class="service-grid">
-        <div class="service-card animate">
-          <h3>Piping Fabrication</h3>
-          <p>Custom fabrication of stainless steel, carbon steel, and alloy piping systems for industrial facilities.</p>
-        </div>
-        <div class="service-card animate">
-          <h3>Welding & Inspection</h3>
-          <p>Certified welders providing high-quality welds with non-destructive testing and quality assurance.</p>
-        </div>
-        <div class="service-card animate">
-          <h3>Maintenance & Repairs</h3>
-          <p>Preventive and corrective maintenance for plant piping systems, tanks, and valves.</p>
-        </div>
-        <div class="service-card animate">
-          <h3>Manpower Supply</h3>
-          <p>Our services also include providing manpower to meet the requirements of manufacturing units, construction sites and other labour-intensive industries.</p>
-        </div>
-      </div>
+
+<!-- ================= Our Servises ================= -->
+<!-- Piping Fabrication -->
+<section class="about-section">
+    <div class="about-text">
+        <h2>Piping Fabrication</h2>
+        <p>Custom fabrication of stainless steel, carbon steel, and alloy piping systems for industrial facilities.</p>
     </div>
-  </section>
+</section>
+
+<!-- Welding & Inspection -->
+<section class="md-message">
+    <h2>Welding & Inspection</h2>
+    <p>Certified welders providing high-quality welds with non-destructive testing and quality assurance.</p>
+</section>
+   
+<!-- Maintenance & Repairs -->
+<section class="about-section">
+    <div class="about-text">
+        <h2>Maintenance & Repairs</h2>
+        <p>Preventive and corrective maintenance for plant piping systems, tanks, and valves.</p>
+    </div>
+</section>
+
+<!-- Manpower Supply -->
+<section class="md-message">
+    <h2>Manpower Supply</h2>
+    <p>Our services also include providing manpower to meet the requirements of manufacturing units, construction sites and other labour-intensive industries.</p>
+</section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
@@ -342,7 +403,7 @@ footer {
         © 2025 Shreya Enterprises, All Rights Reserved.
     </div>
     <div class="footer-bottom-text">
-       Design by <a href="https://giteshgeeky.blogspot.com/2021/06/what-is-server-error-how-to-find-and-fixed-server-error-5xx-through-google-search-console.html" target="_blank">Gitesh Sharma</a> | <a href="/legal/privacy.html">Privacy</a> | <a href="/sitemap.html">Sitemap</a>
+       Design by <a href="https://giteshgeeky.blogspot.com/2021/06/what-is-server-error-how-to-find-and-fixed-server-error-5xx-through-google-search-console.html" target="_blank">Gitesh Sharma</a> | <a href="/legal/privacy.html" target="_blank">Privacy</a> | <a href="/sitemap.html" target="_blank">Sitemap</a>
     </div>
 </footer>
    
@@ -354,3 +415,4 @@ function toggleMenu(){
 
 </body>
 </html>
+
