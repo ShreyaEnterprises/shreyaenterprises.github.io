@@ -4,8 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://shreyaenterprises.github.io/</loc>
@@ -68,6 +66,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://shreyaenterprises.github.io/docs.html</loc>
+  <lastmod>2025-11-21T09:47:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://shreyaenterprises.github.io/legal/ehs-policy.html</loc>
   <lastmod>2025-11-21T09:47:11+00:00</lastmod>
   <priority>0.64</priority>
@@ -82,6 +85,7 @@
   <lastmod>2025-11-21T09:47:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
 
 
 </urlset>
