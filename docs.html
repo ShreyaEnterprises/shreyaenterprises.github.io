@@ -1,1 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documents – Shreya Enterprises – Bharuch</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
 
+/*=============================
+   THEME COLORS
+==============================*/
+:root {
+    --green: #007c32;
+    --saffron: #CC5500;
+    --dark: #1a1a1a;
+}
+
+/*=============================
+   GLOBAL RESET
+==============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+
+body {
+    background: #f7f7f7;
+    color: #333;
+}
+
+/*=============================
+   HEADER
+==============================*/
+header {
+    width: 100%;
+    background: var(--green);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #E46F1A;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eaffea;
+    transition: .3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+/*=============================
+   HERO SECTION (New Curved Design)
+==============================*/
+.hero {
+    background: linear-gradient(to right, var(--green), #178c30);
+    color: white;
+    padding: 70px 8%;
+    position: relative;
+    text-align: center;
+}
+/*
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: white;
+    border-radius: 0 0 50% 50%;
+} */
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/*=============================
+           Sitemap
+==============================*/
+.container {
+        max-width: 1100px;
+        margin: auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+    }
+
+.container h1 {
+        text-align: center;
+        color: #006400;
+        margin-bottom: 10px;
+    }
+
+.container p {
+        text-align: center;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .sitemap-grid {
+        display: grid;
+        gap: 20px;
+    }
+
+    /* Desktop grid layout */
+    @media (min-width: 750px) {
+        .sitemap-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    /* Section card styling */
+    .sitemap {
+        background: #fafafa;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    /* Section hover animation */
+    .sitemap:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .sitemap h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+        border-left: 4px solid #006400;
+        padding-left: 8px;
+    }
+
+    /* Simple mobile-friendly list styling */
+ .sitemap ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+.sitemap ul li {
+        background: #fff;
+        margin: 6px 0;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+    }
+
+    /* Link hover animation */
+.sitemap ul li:hover {
+        background: #e8f5e9;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
+        border-color: #009900;
+    }
+
+.sitemap ul li a {
+        text-decoration: none;
+        color: #006400;
+        font-weight: bold;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+    ul li:hover a {
+        color: #009900;
+    }
+ 
+/*=============================
+   FOOTER (new design)
+==============================*/
+footer {
+    background: var(--saffron);
+    padding: 30px 8% 15px;
+    margin-top: 70px;
+    position: relative;
+    color: #111;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    color: #222;
+    line-height: 1.5;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-col ul li {
+    margin: 7px 0;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #222;
+    transition: .3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.social-icons a {
+    background: #00000025;
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    background: #000;
+    color: var(--saffron);
+}
+
+/* Bottom bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    padding-top: 20px;
+    border-top: 1px solid #000;
+}
+
+.footer-col img {
+    backdrop-filter: blur(6px);
+    background: #ffff;
+    border-radius: 8px;
+    padding: 0.5px;
+    box-shadow: 0 8px 11px rgba(0,0,0,0.12);
+    border-top: 1px solid var(--saffron);
+    transition: .4s ease;
+    text-align: center;
+    width: 180px;
+}
+
+.footer-bottom-text {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer-bottom-text a {
+    text-decoration: none;
+    color: #222;
+    transition: .3s;
+}
+
+.footer-bottom-text a:hover {
+    color: #fff;
+}
+
+/* ===== Updated Time ===== */
+.updated {
+   color: #777;
+   margin-top: 15px;
+   font-size: 12px;
+   font-weight: 400;
+   margin-left: 25px;
+}
+   
+/*=============================
+   RESPONSIVE NAV
+==============================*/
+@media(max-width: 850px){
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--green);
+        width: 200px;
+        padding: 20px;
+        flex-direction: column;
+        display: none;
+    }
+    nav.active {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="logo">Shreya <span>Enterprises</span></div>
+
+    <nav id="nav-menu">
+        <a href="/index.html">Home</a>
+        <a href="/about/company.html">About</a>
+        <a href="/about/team.html">Team</a>
+        <a href="/services.html">Services</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <h1>Documents</h1>
+    <p>Quick access to all documents or format of Shreya Enterprises.</p>
+</section>
+
+<!-- ================= SITEMAP ================= -->
+<div class="container">
+    <div class="sitemap-grid">
+
+        <!-- SECTION 1 -->
+        <div class="sitemap">
+            <h2>Reports</h2>
+            <ul>
+                <li><a href="/docs/">Report 1</a></li>
+                <li><a href="/docs/">Report 2</a></li>
+                <li><a href="/docs/">Report 3</a></li>
+                <li><a href="/docs/">Report 4</a></li>
+            </ul>
+        </div>
+       
+        <!-- SECTION 2 -->
+        <div class="sitemap">
+            <h2>Formats</h2>
+            <ul>
+                <li><a href="/docs/Experience-Certificate-Format-Shreya-Enterprises.docx">Experience Certificate</a></li>
+                <li><a href="/docs/managing-director.html">Format 2</a></li>
+                <li><a href="/docs/team.html">Format 3</a></li>
+                <li><a href="/docs/workshop.html">Format 4</a></li>
+            </ul>
+        </div>
+        <!-- SECTION 3 -->
+        <div class="sitemap">
+            <h2>Legal</h2>
+            <ul>
+                <li><a href="/docs/ehs-policy.html">Legal 1</a></li>
+                <li><a href="/docs/csr-policy.html">Legal 2</a></li>
+                <li><a href="/docs/privacy.html">Legal 3</a></li>
+                <li><a href="/docs/terms.html">Legal 4</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<p class="updated">Last updated: <script>document.write(new Date().toDateString());</script></p>
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="https://shreyaenterprises.github.io/images/logo_transparent.png" alt="Shreya Enterprises logo" title="Shreya Enterprises">
+            <p>Precision. Innovation. Industrial Excellence.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-youtube" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>📞 +91 9726097222</p>
+            <p>📧 shreyaent2000@gmail.com</p>
+            <p>🏭 3rd Floor, Shilpi Square, Dahej bypass Road, Bharuch, Gujarat, India - 392001</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/company.html">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!---<div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">CNC Machining</a></li>
+                <li><a href="#">Automation</a></li>
+                <li><a href="#">Industrial Design</a></li>
+                <li><a href="#">Machine Manufacturing</a></li>
+            </ul>
+        </div>--->
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Shreya Enterprises, All Rights Reserved.
+    </div>
+    <div class="footer-bottom-text">
+       Design by <a href="https://giteshgeeky.github.io/" target="_blank">Gitesh Sharma</a> | <a href="/legal/privacy.html">Privacy</a> | <a href="/sitemap.html">Sitemap</a>
+    </div>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById('nav-menu').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
