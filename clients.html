@@ -319,7 +319,7 @@ table td.value {
             gap: 20px;
         }
 
-        .box {
+        /*.box {
             background: #fff;
             border-radius: 10px;
             overflow: hidden;
@@ -328,17 +328,35 @@ table td.value {
             transition: transform 0.3s;
         }
 
-        .box:hover {
-            transform: scale(1.05);
-        }
-
         .box img {
             width: 100%;
             height: 140px;
             object-fit: cover;
             display: block;
+        }*/
+   
+        .box:hover {
+            transform: scale(1.05);
         }
 
+        .box {
+             background: #fff;
+             border-radius: 10px;
+             overflow: hidden;
+             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+             text-align: center;
+             transition: transform 0.3s;
+             padding: 10px; /* add padding for logo spacing */
+        }
+
+        .box img {
+             width: 100%;
+             height: 120px;      /* fixed box height */
+             object-fit: contain; /* show full logo without cropping */
+             display: block;
+             background: #fff;    /* clean background */
+         }
+  
         .caption {
             padding: 10px;
             font-size: 15px;
