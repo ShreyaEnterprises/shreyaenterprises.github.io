@@ -222,7 +222,7 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
     justify-content: center;   /* 👈 pulls columns closer */
     column-gap: 30px;          /* 👈 horizontal spacing */
-    row-gap: 15px;             /* vertical spacing */
+    row-gap: 10px;             /* vertical spacing */
 }
 
 .footer-col h3,
