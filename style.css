@@ -407,7 +407,6 @@ footer {
 /* Slider container */
 .slider-cert {
   width: 100%;
-  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -416,13 +415,13 @@ footer {
 .slide-track-cert {
   display: flex;
   width: calc(250px * 16); /* 16 slides */
-  animation: scroll 40s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 /* Individual logo boxes */
 .slide-cert {
   width: 250px;
-  height: 350px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
