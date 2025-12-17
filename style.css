@@ -395,3 +395,51 @@ footer {
     transform: translateX(calc(-250px * 8)); /* Move by half track width */
   }
 }
+
+/* ===== CERTIFICATE SLIDER ===== */
+.certificate-slider {
+  text-align: center;
+  padding: 40px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Slider container */
+.slider-cert {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Track that moves logos */
+.slide-track-cert {
+  display: flex;
+  width: calc(250px * 16); /* 16 slides */
+  animation: scroll 40s linear infinite;
+}
+
+/* Individual logo boxes */
+.slide-cert {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.slide-cert img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.slide-cert img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
