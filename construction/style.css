@@ -87,8 +87,8 @@ header {
   flex-direction: column;
   gap: 15px;
 }
-.about a {
-  text-decoration: none;
+.about-flex a {
+      text-decoration: none;
 }
 .about-img { flex: 1 1 400px; }
 .about-img img {
