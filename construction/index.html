@@ -1,1 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shreya Construction could be a company that supplies construction equipment like
+cranes, Trailer, Hydra, Farana, excavators, and aerial lifts.">
+  <meta name="keywords" content="fabrication services, industrial contractor, welding solutions, construction services, maintenance, Shreya Construction, Shreya Construction Bharuch, Shreya Enterprises Bharuch">
+  <title>Official website of Shreya Construction | Shreya Enterprises - Bharuch</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    // Toggle mobile menu
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("show");
+    }
 
+    // Intersection Observer for animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const animatedItems = document.querySelectorAll(".animate");
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      animatedItems.forEach(el => observer.observe(el));
+    });
+  </script>
+
+<!--Schema Data-->
+<!--Organization Schema Data-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Shreya Enterprises",
+  "taxID": "24AFDPT1522J1ZL",
+  "url": "https://shreyaenterprises.github.io",
+  "logo": "https://shreyaenterprises.github.io/images/logo_transparent.png",
+  "alternateName": "Shreya Enterprises - Bharuch",
+  "sameAs": [
+    "https://www.facebook.com/shreyaenter/",
+    "https://www.instagram.com/shreyaenter/"
+  ],
+  "foundingDate": "2016",
+ "founder": [
+ {
+ "@type": "Person",
+ "name": "Rajeev Tiwari",
+ "url": "https://shreyaenterprises.github.io/about/managing-director.html",
+ "image": "https://shreyaenterprises.github.io/images/rajeev-tiwari.jpg",
+ "sameAs": [
+    "https://www.facebook.com/shreyaenter/"
+  ]
+ }
+ ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "9726097222",
+      "contactType": "customer service",
+      "email": "shreyaent2000@gmail.com",
+      "contactOption": "TollFree",
+      "areaServed": "IN",
+      "availableLanguage": [
+        "en",
+        "hi"
+      ]
+    }
+  ]
+}
+</script>
+<!--Schema Data-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://shreyaenterprises.github.io",
+  "name": "Shreya Enterprises - Engineering Precision for the Oil & Gas Industry",
+  "description": "Specialists in mechanical piping fabrication, installation, and maintenance. Shreya Enterprises provides industrial services across India.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shreya Enterprises",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://shreyaenterprises.github.io/images/logo_transparent.png"
+    }
+  }
+}
+</script>
+<!--Schema Data-->
+  
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">Shreya Construction</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content animate">
+      <h2>Engineering Precision for the Oil & Gas Industry</h2>
+      <p>Specialists in mechanical piping fabrication, installation, and maintenance.</p>
+      <br/>
+      <a href="#contact" class="btn">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section animate">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="about-flex">
+        <div class="about">
+          <p>We want to become a symbol of progress as an organization and drive innovation in the iron and steel industries, with the desire to create a world where services empower individuals and organizations to thrive, to promote a culture of collaboration, sustainability, and growth.</p>
+        </div>      
+        <div class="about-img">
+          <img src="images/shreya-enterprises-about.jpg"/>
+        </div>
+      </div>
+      
+      <!--<div class="team-grid">
+        <div class="team-card animate">
+          <img src="images/rajeev-tiwari.jpg" alt="Rajeev Tiwari">
+          <h3>Rajeev Tiwari</h3>
+          <p>Managing Director</p>
+        </div>
+        <div class="team-card animate">
+          <img src="https://via.placeholder.com/150" alt="Team Member">
+          <h3>Sophia Lee</h3>
+          <p>Project Manager</p>
+        </div>
+        <div class="team-card animate">
+          <img src="https://via.placeholder.com/150" alt="Team Member">
+          <h3>Arun Kumar</h3>
+          <p>Welding Supervisor</p>
+        </div>
+      </div>-->
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section bg-light animate">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-card animate">
+          <h3>Piping Fabrication</h3>
+          <p>Custom fabrication of stainless steel, carbon steel, and alloy piping systems for industrial facilities.</p>
+        </div>
+        <div class="service-card animate">
+          <h3>Welding & Inspection</h3>
+          <p>Certified welders providing high-quality welds with non-destructive testing and quality assurance.</p>
+        </div>
+        <div class="service-card animate">
+          <h3>Maintenance & Repairs</h3>
+          <p>Preventive and corrective maintenance for plant piping systems, tanks, and valves.</p>
+        </div>
+        <div class="service-card animate">
+          <h3>Manpower Supply</h3>
+          <p>Our services also include providing manpower to meet the requirements of manufacturing units, construction sites and other labour-intensive industries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section animate">
+    <div class="container">
+      <h2>Recent Projects</h2>
+      <div class="project-grid">
+        <div class="project-card animate">
+          <img src="images/waaree-energies-ltd-chikhli.jpeg" alt="Waaree">
+          <p>Waaree Energies Ltd.</p>
+          <p>HVAC Pipeline Fabrication & Erection</p>
+        </div>
+        <div class="project-card animate">
+          <img src="images/ongc-jotana.jpeg" alt="ONGC">
+          <p>Oil and Natural Gas Corporation</p>
+          <p>Gas Compression and Dehydration Facilities, GGS</p>
+        </div>
+        <div class="project-card animate">
+          <img src="project/HPCL_Site_Vizag_Visakhapatnam.jpg" alt="HPCL Site - Vizag">
+          <p>Hindustan Petroleum Corporation Limited</p>
+          <p>In the HPCL, Vizag, we working on Vessels and Tanks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== CLIENTS ===== -->
+  <section class="logo-slider">
+    <h2>Our Clients</h2>
+    <div class="slider">
+      <div class="slide-track">
+        <!-- Repeat logos (minimum 10 for smooth loop) -->
+        <div class="slide"><img src="clients/ONGC_ltd.png" alt="Client 1"></div>
+        <div class="slide"><img src="clients/petrofac.svg" alt="Client 2"></div>
+        <div class="slide"><img src="clients/Waaree_logo.png" alt="Client 3"></div>
+        <div class="slide"><img src="clients/sumsung_engineering.png" alt="Client 4"></div>
+        <div class="slide"><img src="clients/ACES_logo.png" alt="Client 5"></div>
+        <div class="slide"><img src="clients/Essar_logo.svg" alt="Client 6"></div>
+        <div class="slide"><img src="clients/Punj_Lloyd_logo.png" alt="Client 7"></div>
+        <div class="slide"><img src="clients/Technip.svg" alt="Client 8"></div>
+        <div class="slide"><img src="clients/foxconn_logo.png" alt="Client 9"></div>
+        <div class="slide"><img src="clients/linde_logo.png" alt="Client 10"></div>
+        <div class="slide"><img src="clients/multitex_logo.png" alt="Client 11"></div>
+        <div class="slide"><img src="clients/petronet_lng_ltd.png" alt="Client 12"></div>
+        <div class="slide"><img src="clients/united-phosphorus-limited.svg" alt="Client 13"></div>
+
+        <!-- Duplicate logos for seamless looping -->
+        <div class="slide"><img src="clients/ONGC_ltd.png" alt="Client 1"></div>
+        <div class="slide"><img src="clients/petrofac.svg" alt="Client 2"></div>
+        <div class="slide"><img src="clients/Waaree_logo.png" alt="Client 3"></div>
+        <div class="slide"><img src="clients/sumsung_engineering.png" alt="Client 4"></div>
+        <div class="slide"><img src="clients/ACES_logo.png" alt="Client 5"></div>
+        <div class="slide"><img src="clients/Essar_logo.svg" alt="Client 6"></div>
+        <div class="slide"><img src="clients/Punj_Lloyd_logo.png" alt="Client 7"></div>
+        <div class="slide"><img src="clients/Technip.svg" alt="Client 8"></div>
+        <div class="slide"><img src="clients/foxconn_logo.png" alt="Client 9"></div>
+        <div class="slide"><img src="clients/linde_logo.png" alt="Client 10"></div>
+        <div class="slide"><img src="clients/multitex_logo.png" alt="Client 11"></div>
+        <div class="slide"><img src="clients/petronet_lng_ltd.png" alt="Client 12"></div>
+        <div class="slide"><img src="clients/united-phosphorus-limited.svg" alt="Client 13"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="certificate-slider">
+    <h2>Certification</h2>
+    <div class="slider-cert">
+      <div class="slide-track-cert">
+        <!-- Repeat logos (minimum 10 for smooth loop) -->
+        <div class="slide-cert"><img src="/docs/certificate-1.jpg" alt="Quality Management Systems"></div>
+        <div class="slide-cert"><img src="/docs/certificate-2.jpg" alt="Occupational Health and Safety Management System"></div>
+        <div class="slide-cert"><img src="/docs/certificate-3.jpg" alt="Environmental Management System"></div>
+      
+        <!-- Duplicate logos for seamless looping -->
+        <div class="slide-cert"><img src="/docs/certificate-1.jpg" alt="Quality Management Systems"></div>
+        <div class="slide-cert"><img src="/docs/certificate-2.jpg" alt="Occupational Health and Safety Management System"></div>
+        <div class="slide-cert"><img src="/docs/certificate-3.jpg" alt="Environmental Management System"></div>
+      
+      </div>
+    </div>
+  </section>
+  
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section bg-light animate">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have a question or project? Get in touch with us below.</p>
+       <div class="contact-flex">
+        <form class="contact-form">
+        <h3>Our Address</h3>
+           <p>335, 3rd Floor, Shilpi Square, Opp. Nagori Dairy, Dahej bypass Road, Dist.- Bharuch, Gujarat, India - 392001</p>
+        <h3>Phone</h3>
+           <p>02642-355784, +91 9726097222, +91 8128220264</p>
+        <h3>Email</h3>
+           <p>shreyaent2000@gmail.com</p>
+        <h3>Office Time</h3>
+           <p>Mon – Sat: 8AM – 7PM</p>
+        </form>      
+        <div class="map animate">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3706.5932249717716!2d72.97568537448862!3d21.71851588010901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be027a3e93117e7%3A0xcd90874f686a4344!2sShreya%20Enterprises!5e0!3m2!1sen!2sus!4v1762509056906!5m2!1sen!2sus"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <!--<footer>
+    <div class="container footer-flex">
+      <div class="shreya">
+      <img src="https://shreyaenterprises.github.io/images/logo_transparent.png" alt="Shreya Icon">
+      </div>
+      <p>&copy; 2025 Shreya Enterprises, All Rights Reserved.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/shreyaenter"><img src="https://raw.githubusercontent.com/gitesh-sharma/company/main/sharmaji-technology-media/images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/gitesh-sharma/company/main/sharmaji-technology-media/images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/gitesh-sharma/company/main/sharmaji-technology-media/images/linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </footer>-->
+  
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="https://shreyaenterprises.github.io/images/logo_transparent.png" alt="Shreya Enterprises logo" title="Shreya Enterprises">
+            <p>Precision. Innovation. Industrial Excellence.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/shreyaenter/"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-youtube" style="font-size:24px"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>📞 +91 9726097222</p>
+            <p>📧 shreyaent2000@gmail.com</p>
+            <p>🏭 3rd Floor, Shilpi Square, Dahej bypass Road, Bharuch, Gujarat, India - 392001</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/clients.html">Our Clients</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>About</h4>
+            <ul>
+                <li><a href="/about/company.html">Company</a></li>
+                <li><a href="/about/managing-director.html">Managing Director</a></li>
+                <li><a href="/about/team.html">Our Team</a></li>
+                <li><a href="/career.html">Careers</a></li>
+                <li><a href="/about/workshop.html">Workshop</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="/legal/ehs-policy.html">EHS Policy</a></li>
+                <li><a href="/legal/csr-policy.html">CSR Policy</a></li>
+                <li><a href="/legal/privacy.html">Privacy Policy</a></li>
+                <li><a href="/legal/terms.html">Terms & Conditions</a></li>
+                <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
+            </ul>
+        </div>
+      
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Shreya Enterprises, All Rights Reserved.
+    </div>
+    <div class="footer-bottom-text">
+       Design by <a href="https://giteshgeeky.github.io" target="_blank">Gitesh Sharma</a> | <a href="/sitemap.html">Sitemap</a>
+    </div>
+</footer>
+
+</body>
+</html>
