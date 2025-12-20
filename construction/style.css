@@ -29,7 +29,7 @@ h2 { color: #000ba7; margin-bottom: 20px; }
 
 /* ===== HEADER ===== */
 header {
-  background: #007c32;
+  background: #00b2f2;
   color: #fff;
   padding: 15px 0;
   position: sticky;
@@ -204,7 +204,7 @@ header {
    FOOTER (new design)
 ==============================*/
 footer {
-    background: #CC5500;
+    background: #535353;
     padding: 30px 8% 15px;
     margin-top: 70px;
     position: relative;
