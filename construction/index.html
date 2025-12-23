@@ -137,55 +137,6 @@ header {
   object-fit: cover;
 }
 
-/* ===== SERVICES ===== */
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-.service-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-.service-card:hover { transform: translateY(-5px); }
-
-/* ===== PROJECTS ===== */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-.project-card img { width: 100%; border-radius: 8px; transition: transform 0.3s; }
-.project-card:hover img { transform: scale(1.03); }
-
-/* ===== CONTACT ===== */
-.contact-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
-  justify-content: center;
-  align-items: flex-start;
-}
-.contact-form {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.contact-form input, .contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: none;
-}
-.map { flex: 1 1 400px; }
-
 /* ===== FOOTER ===== */
 /*footer {
       position: relative;
@@ -357,53 +308,6 @@ footer {
   .menu-toggle { display: block; }
 }
 
-/* ===== LOGO SLIDER ===== */
-.logo-slider {
-  text-align: center;
-  padding: 40px 0;
-  background: #fff;
-  overflow: hidden;
-}
-
-/* Slider container */
-.slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Track that moves logos */
-.slide-track {
-  display: flex;
-  width: calc(250px * 16); /* 16 slides */
-  animation: scroll 40s linear infinite;
-}
-
-/* Individual logo boxes */
-.slide {
-  width: 250px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-
-.slide img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
-}
-
 /* Animation for continuous scrolling */
 @keyframes scroll {
   0% {
@@ -414,52 +318,71 @@ footer {
   }
 }
 
-/* ===== CERTIFICATE SLIDER ===== */
-.certificate-slider {
-  text-align: center;
-  padding: 40px 0;
-  background: #fff;
-  overflow: hidden;
-}
+/* ===== Equipment Card ===== */
 
-/* Slider container */
-.slider-cert {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
+.equipment-container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 
-/* Track that moves logos */
-.slide-track-cert {
-  display: flex;
-  width: calc(250px * 16); /* 16 slides */
-  animation: scroll 20s linear infinite;
-}
+    @media (min-width: 768px) {
+        .equipment-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
-/* Individual logo boxes */
-.slide-cert {
-  width: 250px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-}
+    @media (min-width: 1024px) {
+        .equipment-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 
-.slide-cert img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
+    .equipment-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 350px;
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    .equipment-card:hover {
+        transform: translateY(-6px);
+    }
 
-.slide-cert img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
-  }
+    .equipment-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .content {
+        padding: 1.2rem;
+    }
+
+    .category {
+        font-size: 0.85rem;
+        font-weight: bold;
+        color: #4f46e5;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .title {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+        color: #222;
+    }
+
+    .excerpt {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+    
   </style>
   <!---style css--->
   
