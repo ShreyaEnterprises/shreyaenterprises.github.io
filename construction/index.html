@@ -304,8 +304,22 @@ footer {
     flex-direction: column;
     width: 200px;
     padding: 20px;
-    border-radius: 8px;
+    /*border-radius: 8px;*/
   }
+
+@media (max-width: 768px) {
+  .nav-links li {
+    padding: 8px 0;
+  }
+  .nav-links a {
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  .nav-links a:hover {
+    background: rgba(255,255,255,0.2);
+  }
+}
+  
   .nav-links.show { display: flex; }
   .menu-toggle { display: block; }
 }
