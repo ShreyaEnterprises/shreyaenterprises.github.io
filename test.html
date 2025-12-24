@@ -7,7 +7,7 @@
 
 <style>
 :root {
-  --sky-blue: #00bfff; /* sky-blue color */
+  --sky-blue: #00bfff;
 }
 
 *{
@@ -30,12 +30,12 @@ body{
   margin:auto;
   padding:20px;
   display:flex;
-  align-items:center;
+  align-items:stretch; /* make content & button equal height */
   gap:20px;
-  border-left:6px solid var(--sky-blue); /* notification border sky-blue */
+  border-left:6px solid var(--sky-blue);
 }
 
-/* Image (Desktop) */
+/* Image */
 .card-img img{
   width:130px;
   height:130px;
@@ -43,47 +43,52 @@ body{
   border-radius:12px;
 }
 
+/* CONTENT + BUTTON WRAPPER FOR DESKTOP */
+.card-content-wrapper{
+  flex:1;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
 /* Content */
 .card-content{
   flex:1;
-  display:flex;
-  flex-direction:column;
 }
 
 .card-content h3{
-  margin:6px 0 8px;
+  margin:0 0 10px;
   font-size:22px;
-  color:#222;
 }
 
 .card-content h3 span{
-  color: var(--sky-blue); /* Shreya in sky-blue */
+  color: var(--sky-blue);
 }
 
 .card-content p{
   color:#666;
   font-size:15px;
   line-height:1.6;
-  margin:0 0 auto; /* push button to bottom */
+  margin:0;
 }
 
 /* Button */
 .btn{
   display:inline-block;
-  margin-top:14px;
   padding:12px 28px;
-  background:#000; /* black */
+  background:#000;
   color:#fff;
   text-decoration:none;
   border-radius:8px;
   font-weight:600;
-  align-self:flex-end; /* desktop right */
+  align-self:center; /* vertically center in flex */
   transition:0.3s ease;
 }
 
 .btn:hover{
-  background: var(--sky-blue); /* hover sky-blue */
-  color:#fff;
+  background: var(--sky-blue);
 }
 
 /* ===== MOBILE VIEW ===== */
@@ -93,14 +98,19 @@ body{
     flex-direction:column;
     text-align:center;
     border-left:none;
-    border-top:6px solid var(--sky-blue); /* mobile top border */
+    border-top:6px solid var(--sky-blue);
+    padding:0;
+  }
+
+  .card-content-wrapper{
+    flex-direction:column;
+    align-items:center;
   }
 
   .card-img{
     margin-top:20px;
   }
 
-  /* Circle + shadow */
   .card-img img{
     width:180px;
     height:180px;
@@ -120,7 +130,7 @@ body{
   .btn{
     width:100%;
     padding:14px;
-    align-self:auto; /* full width on mobile */
+    align-self:auto;
   }
 }
 </style>
@@ -128,7 +138,6 @@ body{
 
 <body>
 
-<!-- NOTIFICATION CARD -->
 <div class="notify-card">
 
   <!-- IMAGE -->
@@ -136,13 +145,15 @@ body{
     <img src="https://shreyaenterprises.github.io/construction/images/shreya-construction.jpg" alt="Shreya Construction">
   </div>
 
-  <!-- CONTENT -->
-  <div class="card-content">
-    <h3><span>Shreya</span> Construction</h3>
-    <p>
-      A wide range of heavy-duty cranes from 40 Ton to 200 Ton capacity for rent.
-      Ideal for lifting and shifting large industrial machinery and construction materials.
-    </p>
+  <!-- CONTENT + BUTTON WRAPPER -->
+  <div class="card-content-wrapper">
+    <div class="card-content">
+      <h3><span>Shreya</span> Construction</h3>
+      <p>
+        A wide range of heavy-duty cranes from 40 Ton to 200 Ton capacity for rent.
+        Ideal for lifting and shifting large industrial machinery and construction materials.
+      </p>
+    </div>
     <a href="#" class="btn">View Details</a>
   </div>
 
