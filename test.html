@@ -1,4 +1,11 @@
-<!-- Shreya Construction Notification Card -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreya Construction Notice</title>
+
 <style>
 .sc-notice-card {
   display: flex;
@@ -22,15 +29,15 @@
     center / cover no-repeat;
 }
 
-/* LOGO – UPDATED */
+/* LOGO */
 .sc-logo {
   width: 72px;
   height: 72px;
   min-width: 72px;
   object-fit: contain;
   background: #ffffff;
-  padding: 5px;          /* ✅ updated */
-  border-radius: 8px;    /* ✅ updated */
+  padding: 5px;        /* updated padding */
+  border-radius: 8px;  /* updated radius */
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
@@ -71,7 +78,7 @@
   transform: translateY(-2px);
 }
 
-/* RESPONSIVE BREAKPOINTS */
+/* RESPONSIVE BEHAVIOR */
 @media (max-width: 1024px) {
   .sc-logo {
     width: 64px;
@@ -95,6 +102,9 @@
   }
 }
 </style>
+</head>
+
+<body>
 
 <div class="sc-notice-card">
   <img src="logo.png" alt="Shreya Construction Logo" class="sc-logo">
@@ -109,3 +119,6 @@
 
   <a href="#" class="sc-notice-btn">View More</a>
 </div>
+
+</body>
+</html>
