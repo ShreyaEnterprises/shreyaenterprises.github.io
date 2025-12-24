@@ -1,0 +1,111 @@
+<!-- Shreya Construction Notification Card -->
+<style>
+.sc-notice-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  border-radius: 22px;
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.80),
+      rgba(255, 255, 255, 0.80)
+    ),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e")
+    center / cover no-repeat;
+}
+
+/* LOGO – UPDATED */
+.sc-logo {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 5px;          /* ✅ updated */
+  border-radius: 8px;    /* ✅ updated */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* CONTENT */
+.sc-notice-content {
+  flex: 1;
+}
+
+.sc-notice-content h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2933;
+}
+
+.sc-notice-content p {
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: #5f6b7a;
+  line-height: 1.65;
+  max-width: 720px;
+}
+
+/* BUTTON */
+.sc-notice-btn {
+  background: #cc5500;
+  color: #ffffff;
+  padding: 12px 32px;
+  border-radius: 32px;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sc-notice-btn:hover {
+  background: #a94400;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  .sc-logo {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sc-notice-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 16px;
+    border-radius: 18px;
+  }
+
+  .sc-notice-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="sc-notice-card">
+  <img src="logo.png" alt="Shreya Construction Logo" class="sc-logo">
+
+  <div class="sc-notice-content">
+    <h4>Shreya Construction</h4>
+    <p>
+      Heavy construction machinery services including Farana, Hydra,
+      Crane and Excavator for industrial projects.
+    </p>
+  </div>
+
+  <a href="#" class="sc-notice-btn">View More</a>
+</div>
