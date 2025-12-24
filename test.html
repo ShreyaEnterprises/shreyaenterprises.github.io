@@ -30,25 +30,24 @@ body{
   margin:auto;
   padding:20px;
   display:flex;
-  align-items:stretch; /* make content & button equal height */
   gap:20px;
-  border-left:6px solid var(--sky-blue);
+  border-left:6px solid var(--sky-blue); 
+  align-items:center; /* vertical center */
 }
 
-/* Image */
+/* Image (Desktop) */
 .card-img img{
-  width:130px;
-  height:130px;
+  width:150px;
+  height:150px;
   object-fit:cover;
   border-radius:12px;
 }
 
-/* CONTENT + BUTTON WRAPPER FOR DESKTOP */
+/* Content + Button wrapper for flex alignment */
 .card-content-wrapper{
-  flex:1;
   display:flex;
-  flex-direction:row;
-  align-items:center;
+  flex:1;
+  align-items:center; /* vertical center */
   justify-content:space-between;
   gap:20px;
 }
@@ -59,8 +58,8 @@ body{
 }
 
 .card-content h3{
-  margin:0 0 10px;
-  font-size:22px;
+  margin:0;
+  font-size:26px;
 }
 
 .card-content h3 span{
@@ -71,40 +70,34 @@ body{
   color:#666;
   font-size:15px;
   line-height:1.6;
-  margin:0;
+  margin-top:8px;
 }
 
 /* Button */
 .btn{
   display:inline-block;
-  padding:12px 28px;
-  background:#000;
+  padding:14px 28px;
+  background:#000; /* black */
   color:#fff;
   text-decoration:none;
   border-radius:8px;
   font-weight:600;
-  align-self:center; /* vertically center in flex */
   transition:0.3s ease;
+  flex-shrink:0;
 }
 
 .btn:hover{
   background: var(--sky-blue);
+  color:#fff;
 }
 
 /* ===== MOBILE VIEW ===== */
 @media (max-width:768px){
-
   .notify-card{
     flex-direction:column;
     text-align:center;
     border-left:none;
     border-top:6px solid var(--sky-blue);
-    padding:0;
-  }
-
-  .card-content-wrapper{
-    flex-direction:column;
-    align-items:center;
   }
 
   .card-img{
@@ -119,18 +112,20 @@ body{
     box-shadow:0 12px 28px rgba(0,0,0,0.30);
   }
 
-  .card-content{
-    padding:20px;
+  /* Mobile content wrapper flex → column */
+  .card-content-wrapper{
+    flex-direction:column;
+    align-items:center;
   }
 
   .card-content h3{
-    font-size:20px;
+    font-size:22px;
   }
 
   .btn{
     width:100%;
+    margin-top:16px;
     padding:14px;
-    align-self:auto;
   }
 }
 </style>
@@ -138,6 +133,7 @@ body{
 
 <body>
 
+<!-- NOTIFICATION CARD -->
 <div class="notify-card">
 
   <!-- IMAGE -->
@@ -147,6 +143,8 @@ body{
 
   <!-- CONTENT + BUTTON WRAPPER -->
   <div class="card-content-wrapper">
+
+    <!-- CONTENT -->
     <div class="card-content">
       <h3><span>Shreya</span> Construction</h3>
       <p>
@@ -154,7 +152,10 @@ body{
         Ideal for lifting and shifting large industrial machinery and construction materials.
       </p>
     </div>
+
+    <!-- BUTTON -->
     <a href="#" class="btn">View Details</a>
+
   </div>
 
 </div>
