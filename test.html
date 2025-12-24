@@ -29,25 +29,6 @@ body{
   align-items:center;
   gap:20px;
   border-left:6px solid #cc5500;
-  position:relative;
-}
-
-/* ===== LOGO ===== */
-.logo-badge{
-  position:absolute;
-  top:16px;
-  left:16px;
-  background:#fff;
-  padding:5px;
-  border-radius:8px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.15);
-  z-index:10;
-}
-
-.logo-badge img{
-  height:36px;
-  width:auto;
-  display:block;
 }
 
 /* Image (Desktop) */
@@ -98,34 +79,27 @@ body{
 
 .btn:hover{
   background:#a84400;
-  transform:translateY(-2px);
 }
 
-/* ===== MOBILE VIEW (FIXED IMAGE ROUNDING) ===== */
+/* ===== MOBILE VIEW (CIRCLE IMAGE) ===== */
 @media (max-width:768px){
 
   .notify-card{
     flex-direction:column;
-    padding:0;
+    text-align:center;
     border-left:none;
     border-top:6px solid #cc5500;
-    text-align:center;
-  }
-
-  .logo-badge{
-    top:12px;
-    left:12px;
   }
 
   .card-img{
-    padding:14px;
+    margin-top:20px;
   }
 
-  /* 🔥 IMPORTANT FIX HERE */
+  /* 🔥 100% ROUNDED IMAGE */
   .card-img img{
-    width:100%;
-    height:220px;
-    border-radius:10px;   /* ✅ soft rounded, NOT full */
+    width:180px;
+    height:180px;
+    border-radius:50%;
     object-fit:cover;
   }
 
@@ -148,11 +122,6 @@ body{
 <body>
 
 <div class="notify-card">
-
-  <!-- LOGO -->
-  <div class="logo-badge">
-    <img src="https://shreyaenterprises.github.io/construction/images/shreya-construction.jpg" alt="Shreya Enterprises Logo">
-  </div>
 
   <!-- IMAGE -->
   <div class="card-img">
