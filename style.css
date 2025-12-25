@@ -454,3 +454,113 @@ footer {
   transform: scale(1.05);
 }
 
+/* =Shreya Construction Website on Home Page= */
+/* ===== CARD (DESKTOP / TABLET) ===== */
+.notify-card{
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+  display:flex;
+  gap:20px;
+  border-left:6px solid #00bfff; 
+  align-items:center; /* vertical center */
+}
+
+/* Image (Desktop) */
+.card-img img{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+/* Content + Button wrapper for flex alignment */
+.card-content-wrapper{
+  display:flex;
+  flex:1;
+  align-items:center; /* vertical center */
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* Content */
+.card-content{
+  flex:1;
+}
+
+.card-content h3{
+  margin:0;
+  font-size:26px;
+}
+
+.card-content h3 span{
+  color: #00bfff;
+}
+
+.card-content p{
+  color:#666;
+  font-size:15px;
+  line-height:1.6;
+  margin-top:8px;
+}
+
+/* Button */
+.btn-sc{
+  display:inline-block;
+  padding:14px 28px;
+  background:#000; /* black */
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  transition:0.3s ease;
+  flex-shrink:0;
+}
+
+.btn-sc:hover{
+  background: #00bfff;
+  color:#fff;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width:768px){
+  .notify-card{
+    flex-direction:column;
+    text-align:center;
+    border-left:none;
+    border-top:6px solid #00bfff;
+  }
+
+  .card-img{
+    margin-top:20px;
+  }
+
+  .card-img img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 12px 28px rgba(0,0,0,0.30);
+  }
+
+  /* Mobile content wrapper flex → column */
+  .card-content-wrapper{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .card-content h3{
+    font-size:22px;
+  }
+
+  .btn-sc{
+    width:100%;
+    margin-top:16px;
+    padding:14px;
+  }
+}
+
+
