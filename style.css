@@ -461,7 +461,7 @@ footer {
   border-radius:18px;
   box-shadow:0 12px 30px rgba(0,0,0,0.12);
   max-width:900px;
-  margin:40px auto 0;
+  margin:30px auto 0;
   padding:20px;
   display:flex;
   gap:20px;
@@ -530,7 +530,7 @@ footer {
   .notify-card{
     flex-direction:column;
     text-align:center;
-    margin-top:30px;
+    margin:90%;
     border-left:none;
     border-top:6px solid #00bfff;
   }
