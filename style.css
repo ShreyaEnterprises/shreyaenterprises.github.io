@@ -530,7 +530,6 @@ footer {
   .notify-card{
     flex-direction:column;
     text-align:center;
-    margin:15px;
     border-left:none;
     border-top:6px solid #00bfff;
   }
