@@ -288,7 +288,16 @@ footer {
     transition: .4s ease;
     text-align: center;
     width: 180px;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
 }
+.footer-col img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
 
 .footer-bottom-text {
     text-align: center;
