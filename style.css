@@ -41,6 +41,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+img.logo-header { width: 180px; height: auto; }
 .logo { font-size: 1.5em; font-weight: 600; }
 .nav-links { display: flex; gap: 20px; list-style: none; }
 .nav-links a { color: #fff; text-decoration: none; font-weight: 500; }
@@ -279,18 +280,18 @@ footer {
 }
 
 .footer-col img {
-    backdrop-filter: blur(6px);
-    background: #ffff;
-    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    /*background: #ffff;*/
+    border-radius: 2px;
     padding: 0.5px;
     box-shadow: 0 8px 11px rgba(0,0,0,0.12);
     border-top: 1px solid var(--saffron);
     transition: .4s ease;
     text-align: center;
     width: 180px;
-    filter: grayscale(100%);
+    /*filter: grayscale(100%);
     opacity: 0.8;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;*/
 }
 .footer-col img:hover {
   filter: grayscale(0%);
